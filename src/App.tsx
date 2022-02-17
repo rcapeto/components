@@ -1,8 +1,19 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState } from 'react';
+
+import { DefaultModal } from './components/Modal';
 
 const App: FunctionComponent = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return(
-    <h1>Hello World</h1>
+    <div>
+      <DefaultModal 
+        isOpen={isOpen} 
+        closeModal={() => setIsOpen(false)}
+        overlay={true}
+        animation={true}
+      />
+    </div>
   );
 };
 

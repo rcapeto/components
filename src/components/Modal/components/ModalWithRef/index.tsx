@@ -1,8 +1,8 @@
 import { forwardRef, ForwardRefRenderFunction, useState, useImperativeHandle } from 'react';
 
-import { IModalActions, IModalProps } from '../../types';
+import { IModalActions, IModalRefProps } from '../../types';
 
-const ModalWithRef: ForwardRefRenderFunction<IModalActions, IModalProps> = (props, ref) => {
+const ModalWithRef: ForwardRefRenderFunction<IModalActions, IModalRefProps> = (props, ref) => {
    const {} = props;
 
    const [isOpen, setIsOpen] = useState<boolean>(false);

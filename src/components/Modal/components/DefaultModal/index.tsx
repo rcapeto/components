@@ -3,10 +3,10 @@ import { FunctionComponent } from 'react';
 import { IDefaultModalProps } from '../../types';
 
 export const DefaultModal: FunctionComponent<IDefaultModalProps> = ({ 
-   animation,
+   animation = true,
    isOpen,
-   overlay,
-   setIsOpen,
+   overlay = true,
+   closeModal
 }) => {
    return(
       <h1>Modal</h1>
