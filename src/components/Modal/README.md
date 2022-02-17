@@ -13,13 +13,13 @@
 
    const [isOpen, setIsOpen] = useState(true);
 
-   return(
-      <div>
-         <DefaultModal isOpen={isOpen} closeModal={() => setIsOpen(false)}>
-            <div>Content</div>
-         </DefaultModal>
-      </div>
-   );
+      return(
+         <div>
+            <DefaultModal isOpen={isOpen} closeModal={() => setIsOpen(false)}>
+               <div>Content</div>
+            </DefaultModal>
+         </div>
+      );
    };
 ```
 
@@ -37,14 +37,14 @@
       modalRef.current.openModal();
    };
 
-   return(
-      <div>
-         <button onClick={onClick}>Open Modal</button>
-         <ModalWithRef ref={modalRef}>
-         <h1>teste</h1>
-         </ModalWithRef>
-      </div>
-   );
+      return(
+         <div>
+            <button onClick={onClick}>Open Modal</button>
+            <ModalWithRef ref={modalRef}>
+            <h1>teste</h1>
+            </ModalWithRef>
+         </div>
+      );
    };
 
 ```
@@ -59,7 +59,7 @@
 | `overlay`  | `boolean` | Has overlay background | `true` |
 | `overlayClick`  | `boolean` | Close Modal when overlay click. | `true` |
 | `animation`  | `boolean` | Has animation | `true` |
-| `overlayRatio`  | `number` | Overlay Background Ratio `1-10`] | `6` |
+| `overlayRatio`  | `number` | Overlay Background Ratio `1-10` | `6` |
 | `isOpen`  | `boolean` | Show or Hide the Modal | `false` |
 | `closeModal`  | `function` | Function to close Modal. | `required` |
 | `children`  | `ReactNode` | Content of Modal | `undefined`|
@@ -71,7 +71,7 @@
 | `overlay`  | `boolean` | Has overlay background | `true` |
 | `overlayClick`  | `boolean` | Close Modal when overlay click. | `true` |
 | `animation`  | `boolean` | Has animation | `true` |
-| `overlayRatio`  | `number` | Overlay Background Ratio `1-10`] | `6` |
+| `overlayRatio`  | `number` | Overlay Background Ratio `1-10` | `6` |
 | `onCloseModal`  | `function` | Callback function, dispatch when close Modal | `undefined` |
 | `onOpenModal`  | `function` | Callback function, dispatch when open Modal | `undefined` |
 | `children`  | `ReactNode` | Content of Modal | `undefined`|
