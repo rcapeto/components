@@ -85,15 +85,15 @@
 | `handleRemoveToast`  | `function` | Function that closes the Toast | - |
 | `active`  | `boolean` | Toast active state  | `false` |
 | `message`  | `string` | Toast message | `Show Toast Message Here` |
-| `toastType`  | `string` | Toast type `success` - `info` - `error` - `warning` | `info` |
+| `toastType`  | `string` | Toast type `success` - `info` - `error` - `warning` | - |
 | `showToast`  | `function<Params>` | Function that active the Toast | - |
 
 
 ## ShowToast Params 
-| Prop | Type | Description                                                                                                                                         | 
+| Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `message`  | `string` | Toast message |
-| `toastType`  | `string` | Toast type `success` - `info` - `error` - `warning` |
+| `message`  | `string` | Toast message | - |
+| `toastType`  | `string` | Toast type `success` - `info` - `error` - `warning` | - |
 
 ## 🔖 Layout
 
