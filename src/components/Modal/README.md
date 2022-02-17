@@ -4,7 +4,7 @@
 ## 🚀 How to use
 
 ### DefaultModal
-```react
+```jsx
   import { FunctionComponent, useState } from 'react';
 
    import { DefaultModal } from './components/Modal';
@@ -42,9 +42,9 @@
 ### DefaultModal
 
 <p align="center">
- <img src=".github/modal/default-modal-desk.png" alt="Modal Desktop" />
+ <img src=".github/default-modal-desk.png" alt="Modal Desktop" />
  <br/>
- <img src=".github/modal/default-modal-mobile.png" alt="Modal Mobile" />
+ <img src=".github/default-modal-mobile.png" alt="Modal Mobile" />
 </p>
 
 ## 👨🏻‍💻 Developers
