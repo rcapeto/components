@@ -1,0 +1,9 @@
+.rcapeto-component--Modal-Content {
+   background-color: var(--white);
+   border-radius: var(--border-radius-2);
+   padding: var(--padding-2);
+   display: flex;
+   flex-direction: column;
+   width: min(630px, 95%);
+   height: min(420px, 100%);
+}

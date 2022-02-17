@@ -10,4 +10,5 @@ export const colors = {
    purple: '#5965e0',
    purpleDark: '#4953b8',
    twitter: '#2aa9e0',
+   black: '#000'
 };

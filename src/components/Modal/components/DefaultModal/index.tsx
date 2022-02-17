@@ -1,14 +1,38 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useEffect } from 'react';
 
 import { IDefaultModalProps } from '../../types';
 
-export const DefaultModal: FunctionComponent<IDefaultModalProps> = ({ 
-   animation = true,
-   isOpen,
-   overlay = true,
-   closeModal
+import { ModalOverlay } from '../ModalOverlay';
+import { ModalContent } from '../ModalContent';
+import { ModalCloseButton } from '../ModalCloseButton';
+
+export const DefaultModal: FunctionComponent<IDefaultModalProps> = ({
+   closeModal, isOpen, animation, overlay, overlayClick = true, overlayRatio, children
 }) => {
+
+   const handleCloseModal = overlayClick ? closeModal : () => {};
+
+   const closeModalWithESC = (event: KeyboardEvent) => {
+      (event.key === 'Escape') && closeModal();
+   };
+
+   useEffect(() => {
+      document.addEventListener('keydown', closeModalWithESC);
+      return () => document.removeEventListener('keydown', closeModalWithESC);
+   }, []);
+
    return(
-      <h1>Modal</h1>
+      <ModalOverlay 
+         isOpen={isOpen} 
+         animation={animation} 
+         overlay={overlay} 
+         overlayRatio={overlayRatio}
+         closeModal={handleCloseModal}
+      >
+         <ModalContent>
+            <ModalCloseButton closeModal={closeModal}/>
+            { children }
+         </ModalContent>
+      </ModalOverlay>
    );
-};
+}; 

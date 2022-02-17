@@ -1,8 +1,8 @@
-import { Dispatch, SetStateAction } from 'react';
-
 export interface IModalProps {
    overlay?: boolean;
    animation?: boolean;
+   overlayRatio?: number;
+   overlayClick?: boolean;
 };
 
 export interface IDefaultModalProps extends IModalProps {

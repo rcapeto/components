@@ -10,6 +10,16 @@
    --purple: #5965e0;
    --purple-dark: #4953b8;
    --twitter: #2aa9e0;
+   --border-radius-1: 4px;
+   --border-radius-2: 8px;
+   --border-radius-3: 12px;
+   --border-radius-4: 16px;
+   --border-radius-5: 20px;
+   --padding-1: 4px;
+   --padding-2: 8px;
+   --padding-3: 12px;
+   --padding-4: 16px;
+   --padding-5: 20px;
 }
 
 * {
@@ -20,6 +30,11 @@
 
 body {
    font-family: 'Roboto', sans-serif;
+}
+
+#root {
+   height: 100%;
+   width: 100%;   
 }
 
 body, input, button, textarea {
