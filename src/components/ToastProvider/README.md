@@ -43,25 +43,19 @@
 
 ## 💻 Documentation
 
-### DefaultModal props
+### ToastProvider props
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `props`  | `object<ToastProps>` | Toast Position `!required' | `{ positionY: top, positionX: right }` |
+| `props`  | `object<ToastProps>` | Toast Position `!required` | `{ positionY: top, positionX: right }` |
 
 
 ### ToastProps
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `positionX`  | `string` | Position on the X axis `left`- `right`| `top` |
-| `positionY`  | `string` | Position on the Y axis `bottom`- `top` | `bottom` |
-
-
-| Prop | Type | Description                                                                                                                                         | Default Value |
-| --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `positionX`  | `string` | Position on the X axis `left`- `right`| `top` |
-| `positionY`  | `string` | Position on the Y axis `bottom`- `top` | `bottom` |
+| `positionX`  | `string` | Position on the X axis `left`- `right`| `right` |
+| `positionY`  | `string` | Position on the Y axis `bottom`- `top` | `top` |
 
 ### useToast 
 - Hook that return Toast values. 
@@ -86,20 +80,20 @@
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `positionX`  | `string` | Position on the X axis `left`- `right`| - |
-| `positionY`  | `string` | Position on the Y axis `bottom`- `top` | - |
+| `positionX`  | `string` | Position on the X axis `left`- `right`| `right` |
+| `positionY`  | `string` | Position on the Y axis `bottom`- `top` | `top` |
 | `handleRemoveToast`  | `function` | Function that closes the Toast | - |
-| `active`  | `boolean` | Toast active state  | - |
-| `message`  | `string` | Toast message | - |
-| `toastType`  | `string` | Toast type `success` - `info` - `error` - `warning` | - |
+| `active`  | `boolean` | Toast active state  | `false` |
+| `message`  | `string` | Toast message | `Show Toast Message Here` |
+| `toastType`  | `string` | Toast type `success` - `info` - `error` - `warning` | `info` |
 | `showToast`  | `function<Params>` | Function that active the Toast | - |
 
 
 ## ShowToast Params 
-| Prop | Type | Description                                                                                                                                         | Default Value |
+| Prop | Type | Description                                                                                                                                         | 
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `message`  | `string` | Toast message | - |
-| `toastType`  | `string` | Toast type `success` - `info` - `error` - `warning` | - |
+| `message`  | `string` | Toast message |
+| `toastType`  | `string` | Toast type `success` - `info` - `error` - `warning` |
 
 ## 🔖 Layout
 
