@@ -80,9 +80,9 @@
 ## 🔖 Layout
 
 <p align="center">
-  <img width="1287" alt="Captura de Tela 2022-02-17 às 15 33 15" src="https://user-images.githubusercontent.com/61842405/154547719-097638f7-ea13-4100-a16a-7edafaa44c34.png">
+  <img width="1287" alt="Modal Desktop" src="https://user-images.githubusercontent.com/61842405/154547719-097638f7-ea13-4100-a16a-7edafaa44c34.png">
   <br/>
-  <img width="378" alt="Captura de Tela 2022-02-17 às 15 33 57" src="https://user-images.githubusercontent.com/61842405/154547820-712bdaa1-be50-4d59-9e0f-ae853f84b331.png">
+  <img width="378" alt="Modal Mobile" src="https://user-images.githubusercontent.com/61842405/154547820-712bdaa1-be50-4d59-9e0f-ae853f84b331.png">
 
 </p>
 
