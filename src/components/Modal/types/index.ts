@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface IModalProps {
    overlay?: boolean;
    animation?: boolean;
@@ -13,6 +15,7 @@ export interface IDefaultModalProps extends IModalProps {
 export interface IModalRefProps extends IModalProps {
    onCloseModal?: () => void;
    onOpenModal?: () => void;
+   children: ReactNode;
 };
 
 export interface IModalActions {
