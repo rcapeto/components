@@ -41,7 +41,7 @@
          <div>
             <button onClick={onClick}>Open Modal</button>
             <ModalWithRef ref={modalRef}>
-            <h1>teste</h1>
+              <h1>teste</h1>
             </ModalWithRef>
          </div>
       );
@@ -80,9 +80,10 @@
 ## 🔖 Layout
 
 <p align="center">
- <img src=".github/default-modal-desk.png" alt="Modal Desktop" />
- <br/>
- <img src=".github/default-modal-mobile.png" alt="Modal Mobile" />
+  <img width="1287" alt="Captura de Tela 2022-02-17 às 15 33 15" src="https://user-images.githubusercontent.com/61842405/154547719-097638f7-ea13-4100-a16a-7edafaa44c34.png">
+  <br/>
+  <img width="378" alt="Captura de Tela 2022-02-17 às 15 33 57" src="https://user-images.githubusercontent.com/61842405/154547820-712bdaa1-be50-4d59-9e0f-ae853f84b331.png">
+
 </p>
 
 ## 👨🏻‍💻 Developers
