@@ -35,11 +35,11 @@ export const ToastProvider: FunctionComponent<IToastProvider> = ({
    };
 
    useEffect(() => {
-      // if(state.active) {
-      //    timeout = setTimeout(handleRemoveToast, 5000);
-      // } else {
-      //    clearTimeout(timeout);
-      // }
+      if(state.active) {
+         timeout = setTimeout(handleRemoveToast, 5000);
+      } else {
+         clearTimeout(timeout);
+      }
    }, [state.active]);
 
    return(

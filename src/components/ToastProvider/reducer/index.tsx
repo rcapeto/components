@@ -3,7 +3,7 @@ import { useReducer } from 'react';
 import { IToastActions, IToastState } from '../types';
 
 const initialState: IToastState = {
-   active: true,
+   active: false,
    message: 'Show Toast Message Here',
    toastType: 'info'
 }; 
