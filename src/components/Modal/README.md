@@ -41,7 +41,7 @@
          <div>
             <button onClick={onClick}>Open Modal</button>
             <ModalWithRef ref={modalRef}>
-              <h1>teste</h1>
+              <div>Content</div>
             </ModalWithRef>
          </div>
       );
