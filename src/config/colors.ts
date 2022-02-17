@@ -10,5 +10,9 @@ export const colors = {
    purple: '#5965e0',
    purpleDark: '#4953b8',
    twitter: '#2aa9e0',
-   black: '#000'
+   black: '#000',
+   toast_warning: '#fff2cd',
+   toast_info: '#cfe1fe',
+   toast_success: '#d1e6dd',
+   toast_error: '#f8d7d9',
 };
