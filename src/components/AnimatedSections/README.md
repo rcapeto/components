@@ -74,18 +74,7 @@
 
       return(
          <div className="container">
-            <div style={{ height: '150vh' }}/>
-            <AnimatedSection>
-               <h1>teste</h1>
-            </AnimatedSection>
-            <div style={{ height: '100vh' }}/>
-            <AnimatedSection sectionTitle='Teste 2'>
-               <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam deserunt veniam 
-                  illo obcaecati? Fuga, commodi dignissimos dolorum ratione dolor quae animi eum 
-                  tempora! Quas et impedit non. Exercitationem, perspiciatis architecto.
-               </p>
-            </AnimatedSection>
+           
          </div>
       );
    };
@@ -96,7 +85,7 @@
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | `sectionsActivated`  | `HTMLElement[]` | Sections has been activated | `[]` |
 | `animatedSections`  | `HTMLElement[]` |  Sections in all Application | `[]` | 
-| `currentPositionY`  | `number` | Function that closes the Toast | - |
+| `currentPositionY`  | `number` | Current window position | - |
 | `handleAddActivedSection`  | `function<Params>` | Toast active state  | `false` |
 
 ### Params
@@ -111,7 +100,7 @@
 <h5>Video</h5>
 <br/>
 <p align="left">
-  <img width="375" alt="Warning Toast Message" src="https://user-images.githubusercontent.com/61842405/154569913-03e8a06f-9dc2-45b4-8500-3bfb1b69285e.png">
+  
 </p>
 
 
