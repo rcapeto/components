@@ -4,8 +4,6 @@
 ## 🚀 How to use
 
 ### TabNavigation
- - [React-Icons](https://react-icons.github.io/react-icons/) is required.
-
 ```jsx
   import { FunctionComponent } from 'react';
 
@@ -51,13 +49,13 @@
 | `items`  | `array<NavigationItem>` | Categories items `required` | `[]` |
 | `navigationType`  | `string` | Navigation Type `buttons` - `tabs` | `buttons` |
 | `navigationPosition`  | `string` | Navigation items position `center` - `left` - `right` | `center` |
-| `onTabSelect`  | `function` | Callback Function dispatch when item has clicked. | `-` |
+| `onTabSelect`  | `function` | Callback Function dispatch when item was clicked | `-` |
 
 ### NavigationItem Props
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `tabTitle`  | `string` | Navigation (button/tab) title. `required` | `-` |
+| `tabTitle`  | `string` | Navigation (button/tab) title `required` | `-` |
 | `tabId`  | `string` | Navigation tab IDt Category icon `required` | `-` |
 | `content`  | `Object<Content>` | Content data  `required` | `-` |
 
@@ -66,8 +64,8 @@
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `heading`  | `string` | Content title. `required` | `-` |
-| `paragraph`  | `string` | Content paragraph. HTML tags are accepted `required` | `-` |
+| `heading`  | `string` | Content title `required` | `-` |
+| `paragraph`  | `string` | Content paragraph, HTML tags are accepted `required` | `-` |
 
 ## 🔖 Layout
 
