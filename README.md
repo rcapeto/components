@@ -47,19 +47,3 @@ Remember, you need a account to access [Figma](http://figma.com/).
 - [Gabriel Cintra](https://github.com/gblcintra)
 
 Made with 🖤 by Developers.
-
-## 🗒 Checklist
-- [ ] Banner with countdown.
-- [ ] Sidebar Menu.
-- [ ] Input with autocomplete.
-- [ ] Area Select.
-- [ ] Tooltip.
-- [ ] Input Button.
-- [ ] Input Password.
-- [ ] Input with Icon.
-- [ ] Numeric Step.
-- [ ] Select Card.
-- [ ] Tabs navigation `sticky`.
-- [ ] Accordion.
-- [ ] Dropdown Options.
-
