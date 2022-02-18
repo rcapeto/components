@@ -1,0 +1,52 @@
+.rcapeto-component--Input-Container {
+   min-height: 2rem;
+   border: 2px solid var(--text);
+   display: flex;
+   width: 100%;
+   max-width: 320px;
+   border-radius: var(--border-radius-1);
+   position: relative;
+
+   input {
+      min-height: 2rem;
+      width: 100%;
+      border: 0;
+      padding: var(--padding-2);
+      outline-color: var(--text);
+      font-size: .75rem;
+      color: var(--text);
+      font-weight: 400;
+
+      &.is--password {
+         padding-right: 40px;
+      }
+   }
+
+   div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 40px;
+      margin: 1px;
+      background-color: var(--purple);
+      border-top-right-radius: var(--border-radius-1);
+      border-bottom-right-radius: var(--border-radius-1);
+      cursor: pointer;
+      transition: background-color ease .6s;
+
+      &.is--password {
+         background-color: transparent;
+         position: absolute;
+         right: 0;
+         top: 5px;
+
+         &:hover {
+            background-color: transparent;
+         }
+      }
+
+      &:hover {
+         background-color: var(--purple-dark);
+      }
+   }
+};
