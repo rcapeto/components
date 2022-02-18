@@ -1,0 +1,45 @@
+.rcapeto-component--TabNavigation-Container-Content {
+   height: 150px;
+   max-width: 95%;
+   margin: 0 auto;
+   padding: var(--padding-5) 0;
+   overflow: auto;
+   margin-bottom: 1px;
+
+   &::-webkit-scrollbar {
+      width: 3px; 
+   }
+    
+   &::-webkit-scrollbar-track {
+      background-color: #fff;
+      width: 2px; 
+      border-radius: 20px;
+   }
+   
+   &::-webkit-scrollbar-thumb {
+      border-radius: 20px;   
+      background-color: #000000;
+   }
+}
+
+.rcapeto-component--TabNavigation-Content {
+   display: none;
+   padding-right: var(--padding-2);
+   &.is--active {
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+   }
+
+   h2 {
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: var(--black);
+   }
+
+   p {
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.5rem;
+   }
+}

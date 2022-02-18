@@ -32,14 +32,6 @@ export const TooltipWrapper: FunctionComponent<TooltipProps> = ({
 
          const outOfScreenX = clientX + tooltipWidth >= windowWidth;
          const outOfScreenY = clientY + tooltipHeight >= windowHeight;
-         
-         console.log({ 
-            clientY,
-            tooltipHeight,
-            outOfScreenY,
-            windowHeight
-         });
-
 
          setLeft(!outOfScreenX ? `${clientX}px`: `${windowWidth - tooltipWidth}px`);
          setTop(!outOfScreenY ? `${clientY}px` : `${windowHeight - tooltipHeight}px`);
