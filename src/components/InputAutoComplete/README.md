@@ -63,7 +63,11 @@
 
 <p align="left">
   
-
+<img width="444" alt="Autoinput without selected itens" src="https://user-images.githubusercontent.com/61842405/154755924-9c89ea9f-195b-4e73-ab8b-8cf867e2d17f.png">
+  
+<br/>
+<img width="467" alt="Autoinput with selected itens" src="https://user-images.githubusercontent.com/61842405/154755954-c095ed16-685b-448e-b02b-0433c866e603.png">
+   
 </p>
 
 ## 👨🏻‍💻 Developers
