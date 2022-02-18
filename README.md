@@ -1,10 +1,10 @@
-## 📜 Requisitos
-- Node instalado na máquina;
-- Gerenciador de pacotes instalado na máquina (npm/yarn);
+## 📜 Requirements
+- Node;
+-(npm/yarn);
 
-## 🧪 Tecnologias
+## 🧪 Techs
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+This project has developed with:
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
@@ -12,38 +12,54 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [SASS](https://sass-lang.com)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
-## 🚀 Como executar
+## 🚀 How to execute
 
-Clone o projeto e acesse a pasta do mesmo.
+Clone the project and access the folder.
 
 ```bash
 $ git clone https://github.com/rcapeto/components.git
 $ cd components
 ```
 
-Para iniciá-lo, siga os passos abaixo:
+To start, follow the instructions:
 ```bash
-# Instalar as dependências
+# Install dependencies
 $ yarn
-# Iniciar o projeto
+# Start project
 $ yarn start
 ```
-O app estará disponível no seu browser pelo endereço http://localhost:3333.
+The app will be available in the [web address](http://localhost:3333).
 
-## 💻 Projeto
+## 💻 Project
 
-Componentes utilizados no dia a dia.
+Frequently used components.
 
 ## 🔖 Layout
 
-*em Breve*
+*In coming*
 
 - [Layout](/) 
 
-Lembrando que você precisa ter uma conta no [Figma](http://figma.com/).
+Remember, you need a account to access [Figma](http://figma.com/).
 
-## 👨🏻‍💻 Colaboradores
+## 👨🏻‍💻 Devs
 - Raphael Capeto
+- [Gabriel Cintra](https://github.com/gblcintra)
 
 Made with 🖤 by Developers.
+
+## 🗒 Checklist
+- [ ] Banner with countdown.
+- [ ] Sidebar Menu.
+- [ ] Input with autocomplete.
+- [ ] Area Select.
+- [ ] Tooltip.
+- [ ] Input Button.
+- [ ] Input Password.
+- [ ] Input with Icon.
+- [ ] Numeric Step.
+- [ ] Select Card.
+- [ ] Tabs navigation `sticky`.
+- [ ] Accordion.
+- [ ] Dropdown Options.
 

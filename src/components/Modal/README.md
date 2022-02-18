@@ -10,8 +10,7 @@
    import { DefaultModal } from './components/Modal';
 
    const Example: FunctionComponent = () => {
-
-   const [isOpen, setIsOpen] = useState(true);
+      const [isOpen, setIsOpen] = useState(true);
 
       return(
          <div>
@@ -30,12 +29,12 @@
    import { ModalWithRef, ModalRef } from './components/Modal';
 
    const Example: FunctionComponent = () => {
-   const modalRef = useRef<ModalRef>(null);
+      const modalRef = useRef<ModalRef>(null);
 
-   const onClick = () => {
-      modalRef.current && 
-      modalRef.current.openModal();
-   };
+      const onClick = () => {
+         modalRef.current && 
+         modalRef.current.openModal();
+      };
 
       return(
          <div>

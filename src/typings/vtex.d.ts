@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 
 declare global {
-   interface VTEXCustomComponent<Props> extends FunctionComponent<Props> {
+   interface VTEXCustomComponent<Props = {}> extends FunctionComponent<Props> {
       defaultProps?: Props;
       schema?: Schema;
    }
@@ -24,6 +24,7 @@ export interface SchemaProperties {
   },
    [key: string]: {
       type: SchemaType;
+      enumNames?: string[]; //esse funciona junto com o enum
       enum?: string[];
       default?: any;
       title?: string;
