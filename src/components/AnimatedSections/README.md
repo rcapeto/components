@@ -29,11 +29,8 @@
       return(
          <div className="container">
             <div style={{ height: '150vh' }}/>
-            <AnimatedSection>
-               <h1>teste</h1>
-            </AnimatedSection>
-            <div style={{ height: '100vh' }}/>
-            <AnimatedSection sectionTitle='Teste 2'>
+            
+            <AnimatedSection sectionTitle="First Content">
                <p>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam deserunt veniam 
                   illo obcaecati? Fuga, commodi dignissimos dolorum ratione dolor quae animi eum 

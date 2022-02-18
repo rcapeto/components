@@ -10,7 +10,6 @@ export const AnimatedProvider: FunctionComponent = ({ children }) => {
 
    const handleGetSections = () => {
       const sections = Array.from(document.querySelectorAll('[data-section-animated]') as NodeListOf<HTMLElement>);
-      console.log('sections', sections);
 
       sections.length && 
       dispatch({ type: 'SET_ANIMATED_SECTIONS', params: { animatedSections: sections }})
