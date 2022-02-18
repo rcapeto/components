@@ -1,6 +1,6 @@
 ## 📜 Requirements
 - Node;
--(npm/yarn);
+- (npm/yarn);
 
 ## 🧪 Techs
 
