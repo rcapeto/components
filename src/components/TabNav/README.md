@@ -29,7 +29,7 @@
    ];
 
 
-   const App: FunctionComponent = () => {
+   const Example: FunctionComponent = () => {
       return(
          <div className="container">
             <TabNavigation 

@@ -1,0 +1,110 @@
+.rcapeto-component--AutoCompleteInput-Container {
+   border: 1px solid var(--text);
+   max-width: 375px;
+   display: flex; 
+   position: relative;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 5px;  
+   padding: var(--padding-2);
+   border-radius: var(--border-radius-1);
+   box-shadow: 4px 4px 8px 0 rgb(0 0 0 / 20%);
+   background-color: var(--white);
+   width: 100%;
+
+   input {
+      height: 100%;  
+      border-radius: var(--border-radius-1);
+      padding: var(--padding-2);
+      border: 0;
+      min-width: 120px;
+      font-size: .9rem;
+      color: var(--text);
+   }
+};
+
+.rcapeto-component--AutoCompleteInput-Item {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: var(--purple);
+   border-radius: var(--border-radius-2);
+   padding: var(--padding-2);
+   margin: var(--padding-1);
+   gap: 10px;
+
+
+   p {
+      color: var(--white);
+      font-size: .7rem;
+   }
+
+   button {
+      display: flex;
+      border: 0;
+      background-color: rgba(0, 0, 0, .1);
+      border-radius: 100%;
+      padding: var(--padding-1);
+      transition: filter ease .6s;
+
+      &:hover {
+         filter: brightness(.9);
+      }
+   }
+}
+
+.rcapeto-component--AutomCompleteInput-Selected-Items {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.rcapeto-component--AutoCompleteInput-Suggestions {
+   &.is--active {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+   }
+   display: none;
+   position: absolute;
+   top: calc(100% - 3px);
+   width: 100.6%;
+   left: -1px;
+   background-color: var(--white);
+   border: 1px solid var(--text);
+   border-top: 0;
+   box-shadow: 4px 4px 8px 0 rgb(0 0 0 / 20%);
+   max-height: 250px;
+   overflow: auto;
+
+   &::-webkit-scrollbar {
+      width: 3px; 
+   }
+    
+   &::-webkit-scrollbar-track {
+      background-color: #fff;
+      width: 2px; 
+      border-radius: 20px;
+   }
+   
+   &::-webkit-scrollbar-thumb {
+      border-radius: 20px;   
+      background-color: #000000;
+   }
+
+   p {
+      color: var(--text);
+      padding: var(--padding-2);
+      border-bottom: 1px solid var(--text);
+      cursor: pointer;
+      transition: all ease .6s;
+      font-size: 1rem;
+
+      &:hover {
+         background: rgba(0, 0, 0, 0.1);
+      }
+
+      &:last-child {
+         border: 0;
+      }
+   }
+};
