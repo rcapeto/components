@@ -8,6 +8,7 @@ import './styles.scss'
 import Loading from '../Loading';
 
 const Countdown: FunctionComponent<CountDownProps> = ({
+  text ='Oferta acaba em',
   dataInit = '',
   dataFinish = ''
 }) => {
@@ -62,7 +63,7 @@ const Countdown: FunctionComponent<CountDownProps> = ({
                  flex flex-wrap justify-center`}
               >
                 <h2 className={`gbcintra-components--countDownBannerTitle`}>
-                  Esta oferta termina em
+                  {text}
                 </h2>
                 <ul
                   className={`gbcintra-components--bannerCountDownBFCounter list ph5 items-center`}

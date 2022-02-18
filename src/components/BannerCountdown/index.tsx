@@ -4,7 +4,7 @@ import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { IBannerProps } from './types';
+import { ContentBannerProps, IBannerProps } from './types';
 import Banner from './components/Banner';
 
 const defaultSettings: Settings = {
@@ -18,7 +18,8 @@ const defaultSettings: Settings = {
     slidesToShow: 1
 };
 
-const BannerCountdown: FunctionComponent<IBannerProps> = ({ 
+
+const BannerCountdown: FunctionComponent<IBannerProps> = ({
     sliderSettings = defaultSettings,
     contents
 }) => {

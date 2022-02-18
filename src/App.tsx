@@ -8,6 +8,7 @@ const array: ContentBannerProps[] = [
     alt: 'darkness',
     title: 'Darkness',
     countdown:{
+      text:'Oferta termina em :',
       countdownUse:true,
       dataInit:'2022-02-17T08:00:00.000Z',
       dataFinish:'2022-02-18T03:46:00.000Z'
@@ -18,6 +19,7 @@ const array: ContentBannerProps[] = [
     alt: 'guardian',
     title: 'Guardian',
     countdown:{
+      text:'Oferta termina em :',
       countdownUse:true,
       dataInit:'2022-02-17T08:00:00.000Z',
       dataFinish:'2022-02-20T03:00:00.000Z'
@@ -28,6 +30,7 @@ const array: ContentBannerProps[] = [
     alt: 'darkness',
     title: 'Darkness',
     countdown:{
+      text:'Oferta termina em :',
       countdownUse:true,
       dataInit:'2022-02-17T08:00:00.000Z',
       dataFinish:'2022-02-18T03:46:00.000Z'
@@ -38,6 +41,7 @@ const array: ContentBannerProps[] = [
     alt: 'guardian',
     title: 'Guardian',
     countdown:{
+      text:'Oferta termina em :',
       countdownUse:true,
       dataInit:'2022-02-17T08:00:00.000Z',
       dataFinish:'2022-02-20T03:00:00.000Z'

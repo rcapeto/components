@@ -8,7 +8,8 @@ export interface ContentBannerProps {
 }
 
 export interface CountDownProps {
-    countdownUse?: true | false;
+    countdownUse: boolean;
+    text?:string,
     dataInit?: string;
     dataFinish?: string;
 }
