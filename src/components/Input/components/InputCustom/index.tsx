@@ -8,7 +8,7 @@ import { IInputProps } from "../../types";
 import './styles.scss';
 
 export const InputCustom: FunctionComponent<IInputProps> = ({ 
-   inputType = 'password',
+   inputType = 'with-button',
    icon = IoMdSend,
    buttonClick = () => {},
    ...rest
