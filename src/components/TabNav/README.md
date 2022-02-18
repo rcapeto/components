@@ -72,12 +72,14 @@
 <h5>Buttons</h5>
 <br/>
 <p align="left">
- 
+ <img width="1439" alt="Navigation with buttons" src="https://user-images.githubusercontent.com/61842405/154717270-19ee8f82-0f0e-4047-8cc7-e3b4186e26fc.png">
 </p>
-
 
 <h5>Tabs</h5>
 <br/>
+<p align="left">
+<br/>
+<img width="1399" alt="Navigation with Tabs" src="https://user-images.githubusercontent.com/61842405/154717426-19bb84dc-9727-4c05-b0ce-f81fabe8003d.png">
 
 </p>
 
