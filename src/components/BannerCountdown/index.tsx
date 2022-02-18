@@ -24,7 +24,6 @@ const BannerCountdown: FunctionComponent<IBannerProps> = ({
 }) => {
     return (
         <>
-            <h1>Teste</h1>
             <Slider {...sliderSettings} className="mainSlider">
                 {contents.map((banner, index) => (
                     <Banner {...banner} key={index} />
