@@ -1,8 +1,10 @@
-export interface BannerProps {
+import { Settings } from 'react-slick';
+
+export interface ContentBannerProps {
     image: string;
     alt?: string;
-    url?: string;
     title?: string;
+    countdown:CountDownProps
 }
 
 export interface CountDownProps {
@@ -10,3 +12,15 @@ export interface CountDownProps {
     dataInit?: string;
     dataFinish?: string;
 }
+
+export interface TimerProps {
+    hours: number,
+    minutes: number,
+    seconds: number,
+    days: number,
+ }
+
+export interface IBannerProps {
+    sliderSettings?: Settings;
+    contents: ContentBannerProps[];
+};

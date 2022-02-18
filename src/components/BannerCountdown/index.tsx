@@ -1,17 +1,31 @@
+import { FunctionComponent } from 'react';
 import './styles.scss'
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { BannerProps } from './types';
-import Banner from './components/banner';
+import { IBannerProps } from './types';
+import Banner from './components/Banner';
 
-const BannerCountdoun = (settings: Settings, contents: BannerProps[]) => {
+const defaultSettings: Settings = {
+    arrows: true,
+    autoplay: true,
+    adaptiveHeight: true,
+    dots: true,
+    infinite: true,
+    lazyLoad: 'ondemand',
+    slidesToScroll: 1,
+    slidesToShow: 1
+};
 
+const BannerCountdown: FunctionComponent<IBannerProps> = ({ 
+    sliderSettings = defaultSettings,
+    contents
+}) => {
     return (
         <>
             <h1>Teste</h1>
-            <Slider {...settings} className="mainSlider">
+            <Slider {...sliderSettings} className="mainSlider">
                 {contents.map((banner, index) => (
                     <Banner {...banner} key={index} />
                 ))}
@@ -21,4 +35,4 @@ const BannerCountdoun = (settings: Settings, contents: BannerProps[]) => {
     );
 }
 
-export default BannerCountdoun;
+export default BannerCountdown;
