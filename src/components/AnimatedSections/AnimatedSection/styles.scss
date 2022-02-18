@@ -1,0 +1,17 @@
+.rcapeto-component--Animated-Section {
+   transform: translateX(-100%);
+   opacity: 0;
+   transition: transform .5s, opacity 1s;
+
+   &.has-actived {
+      transform: translateX(0px);
+      opacity: 1;
+   };
+
+   h3 {
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 2.5rem;
+      margin-bottom: 1rem;
+   }
+};
