@@ -59,9 +59,9 @@
 | `overlayClick`  | `boolean` | Close Modal when overlay click. | `true` |
 | `animation`  | `boolean` | Has animation | `true` |
 | `overlayRatio`  | `number` | Overlay Background Ratio `1-10` | `6` |
-| `isOpen`  | `boolean` | Show or Hide the Modal | `false` |
-| `closeModal`  | `function` | Function to close Modal. | `required` |
-| `children`  | `ReactNode` | Content of Modal | `undefined`|
+| `isOpen`  | `boolean` | Show or Hide the Modal `required`| `false` |
+| `closeModal`  | `function` | Function to close Modal. `required`| `() => {}` |
+| `children`  | `ReactNode` | Content of Modal | `null`|
 
 ### ModalRef props
 

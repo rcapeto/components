@@ -15,4 +15,5 @@ export const colors = {
    toast_info: '#cfe1fe',
    toast_success: '#d1e6dd',
    toast_error: '#f8d7d9',
+   tooltip_colors: '#3f3f40'
 };

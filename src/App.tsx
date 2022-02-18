@@ -1,8 +1,14 @@
 import { FunctionComponent } from 'react';
 
+import { TooltipWrapper } from './components/Tooltip';
+
 const App: FunctionComponent = () => {
   return(
-    <h1>Master</h1>
+    <div>
+      <TooltipWrapper label='Tooltip Message'>
+        <h1>Tooltip Example</h1>
+      </TooltipWrapper>
+    </div>
   );
 };
 

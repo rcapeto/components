@@ -1,0 +1,21 @@
+.rcapeto-component--Tooltip-Popup {
+   background-color: var(--tooltip-bg-color);
+   color: var(--white);
+   position: fixed;
+   transition: all ease .2s;
+   box-shadow: 2px 2px 8px 0 rgb(0 0 0 / 20%);
+   padding: var(--padding-2);
+   min-width: 145px;
+   max-width: 160px;
+   border-radius: var(--border-radius-1);
+   visibility: hidden;
+
+   &.is--active {
+      visibility: visible;
+   }
+
+   p {
+      font-size: 14px;
+      word-break: break-word;
+   }
+};

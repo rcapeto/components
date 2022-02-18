@@ -47,7 +47,7 @@
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `props`  | `object<ToastProps>` | Toast Position `!required` | `{ positionY: top, positionX: right }` |
+| `props`  | `object<ToastProps>` | Toast Position | `{ positionY: top, positionX: right }` |
 
 
 ### ToastProps

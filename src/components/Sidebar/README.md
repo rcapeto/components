@@ -56,11 +56,11 @@
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | `categories`  | `array<Category>` | Categories items `required` | `[]` |
-| `closeWithOverlayClick`  | `boolean` | Close Sidebar when click in Overlay `!required` | `true` |
-| `closeWithESC`  | `boolean` | Close Sidebar when click press Escape Key `!required` | `true` |
-| `buttonTitle`  | `string` | Categories `!required` | `Menu` |
-| `iconColor`  | `string` | Button icon color `!required` | `'#000'` |
-| `iconSize`  | `number` | Button icon size `!required` | `20` |
+| `closeWithOverlayClick`  | `boolean` | Close Sidebar when click in Overlay | `true` |
+| `closeWithESC`  | `boolean` | Close Sidebar when click press Escape Key | `true` |
+| `buttonTitle`  | `string` | Categories | `Menu` |
+| `iconColor`  | `string` | Button icon color | `'#000'` |
+| `iconSize`  | `number` | Button icon size | `20` |
 
 ### Category Props
 
