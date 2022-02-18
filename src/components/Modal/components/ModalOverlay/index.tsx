@@ -1,4 +1,4 @@
-import { FunctionComponent, MouseEvent } from 'react';
+import { FunctionComponent, MouseEvent, useEffect } from 'react';
 import { IModalProps } from '../../types';
 
 import { classes } from '../../../../config/class';
@@ -35,6 +35,16 @@ export const ModalOverlay: FunctionComponent<ModalOverlayProps> = ({
          !isContent && closeModal();
       }
    };
+
+   const closeModalWithESC = (event: KeyboardEvent) => {
+      (event.key === 'Escape') && closeModal && closeModal();
+   };
+
+   useEffect(() => {
+      document.addEventListener('keydown', closeModalWithESC);
+      return () => document.removeEventListener('keydown', closeModalWithESC);
+   }, []);
+
 
    return(
       <div

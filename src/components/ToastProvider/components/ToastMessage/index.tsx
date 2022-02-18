@@ -19,8 +19,8 @@ export const ToastMessage: FunctionComponent = () => {
    }
 
    useEffect(() => {
-      window.addEventListener('keydown', closeToastWithESC);
-      return () => window.removeEventListener('keydown', closeToastWithESC);
+      document.addEventListener('keydown', closeToastWithESC);
+      return () => document.removeEventListener('keydown', closeToastWithESC);
    }, []);
 
    return(

@@ -45,15 +45,6 @@ const ModalWithRef: ForwardRefRenderFunction<IModalActions, IModalRefProps> = (p
 
    const handleOverlayCloseModal = overlayClick ? closeModal : () => {};
 
-   const closeModalWithESC = (event: KeyboardEvent) => {
-      (event.key === 'Escape') && closeModal();
-   };
-
-   useEffect(() => {
-      document.addEventListener('keydown', closeModalWithESC);
-      return () => document.removeEventListener('keydown', closeModalWithESC);
-   }, []);
-
    return(
       <ModalOverlay
          isOpen={isOpen} 

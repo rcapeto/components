@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect } from 'react';
+import { FunctionComponent } from 'react';
 
 import { IDefaultModalProps } from '../../types';
 
@@ -11,15 +11,6 @@ export const DefaultModal: FunctionComponent<IDefaultModalProps> = ({
 }) => {
 
    const handleCloseModal = overlayClick ? closeModal : () => {};
-
-   const closeModalWithESC = (event: KeyboardEvent) => {
-      (event.key === 'Escape') && closeModal();
-   };
-
-   useEffect(() => {
-      document.addEventListener('keydown', closeModalWithESC);
-      return () => document.removeEventListener('keydown', closeModalWithESC);
-   }, []);
 
    return(
       <ModalOverlay 

@@ -1,0 +1,47 @@
+.rcapeto-component--Sidebar-Subcategory-Container {
+   height: 0;
+   transform: translateY(-10px);
+   visibility: hidden;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid var(--text);
+   transition: background ease .2s;
+   padding-left: var(--padding-2);
+   
+   &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+   }
+
+   &.is--page {
+      p {
+         color: var(--purple-dark);
+      }
+   }
+
+   &:last-child {
+      border: 0;
+   }
+
+   &.is--active {
+      transform: translateY(0px);
+      transition: all ease .4s; 
+      visibility: visible;
+   }
+
+   a {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+   }
+
+   p {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 400;
+
+      @media (max-width: 768px) {
+         font-size: 12px;
+      }
+   }
+}

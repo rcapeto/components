@@ -1,0 +1,91 @@
+.rcapeto-component--Sidebar-Item-Container {
+   display: flex;
+   flex-direction: column;
+   cursor: pointer;
+   transition: background ease .3s;
+   border-bottom: 1px solid var(--title);
+
+   &:last-child {
+      border-bottom: 0;
+   }
+
+   &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+   }
+
+   .rcapeto-component--Sidebar-Item-Header {
+      > svg {
+        transition: all ease .3s;
+      }
+   }
+
+   &.is--active {
+      background-color: var(--white);
+      border-bottom: 0;
+      margin-bottom: 10px;
+
+      .rcapeto-component--Sidebar-Item-Header {
+         background-color: rgba(0, 0, 0, 0.2);
+         > svg {
+            transform: rotate(90deg);
+         }
+      }
+      .rcapeto-component--Sidebar-Item-Submenu  {
+         margin-left: 5px;
+         margin-top: 10px;
+
+         nav, ul {
+            height: 100%;
+         }
+         height: 100%;
+         padding-bottom: var(--padding-3);
+      }
+   }
+}
+.rcapeto-component--Sidebar-Item-Header {
+   height: 48px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: var(--padding-2);
+
+   div {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+   }
+
+   p {
+      font-size: 16px;
+
+      @media (max-width: 768px) {
+         font-size: 14px;
+      }
+   }
+}
+
+.rcapeto-component--Sidebar-Item-Submenu {
+   height: 0;
+   max-height: 200px;
+   overflow: hidden;
+   overflow-y: scroll;
+
+   &::-webkit-scrollbar {
+      width: 1px; 
+   }
+    
+   &::-webkit-scrollbar-track {
+      background-color: #fff;
+      width: 2px; 
+      border-radius: 20px;
+   }
+   
+   &::-webkit-scrollbar-thumb {
+      border-radius: 20px;   
+      background-color: #000000;
+   }
+
+   nav, ul {
+      height: 0px;
+   }
+}
