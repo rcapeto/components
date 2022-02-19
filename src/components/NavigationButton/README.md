@@ -40,7 +40,7 @@
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `sectionId`  | `string` | Has overlay background `required`| `true` |
+| `sectionId`  | `string` | Has overlay background `required`| `-` |
 | `text`  | `string` | Button text | `Navigation Button`|
 | `color`  | `string` | Content of Modal | `#fff`|
 | `backgroundColor`  | `string` | Content of Modal | `#5965e0`|
