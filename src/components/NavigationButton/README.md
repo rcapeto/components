@@ -48,7 +48,11 @@
 ## 🔖 Layout
 
 <p align="center">
-https://user-images.githubusercontent.com/61842405/154787331-77cafaf1-b0d6-41e7-a401-6081416d1ea8.mov
+   
+
+https://user-images.githubusercontent.com/61842405/154787355-960ffc0d-f9cc-4307-ab7a-37f0d827c682.mov
+
+
 </p>
 
 ## 👨🏻‍💻 Developers
