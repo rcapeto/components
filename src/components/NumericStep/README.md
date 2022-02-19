@@ -26,7 +26,7 @@
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `size`  | `string` | Stepper size `small` - `medium` - `large` | `small` |
+| `size`  | `string` | Stepper size `small` - `medium` - `large` `required`| `small` |
 | `limit`  | `number` | Stepper number limit  | `10` |
 | `onChangeNumber`  | `function<Params>` | A callback function that fires when decremeting | `() => {}`| 
 
