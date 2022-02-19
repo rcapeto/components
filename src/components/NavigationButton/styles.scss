@@ -1,0 +1,15 @@
+.rcapeto-component--NavigationButton-Container {
+   transition: filter ease .5s;
+   min-height: 35px;
+   width: 100%;
+   max-width: 145px;
+   display: flex;
+   align-items: center;
+   border-radius: var(--border-radius-1);
+   cursor: pointer;
+   padding: var(--padding-2);
+
+   &:hover {
+      filter: brightness(.9);
+   }
+}
