@@ -28,6 +28,7 @@ export const NavigationButton: FunctionComponent<INavigationButton> = ({
          data-section-id={`#${sectionId}`}
          aria-label="Botão de Navegação"
          onClick={handleNavigate}
+         title={text}
          style={{ backgroundColor, color }}
       >
          { text }
