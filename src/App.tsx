@@ -1,11 +1,9 @@
 import { FunctionComponent } from 'react';
 
-import { NumericStep } from './components/NumericStep';
-
 const App: FunctionComponent = () => {
   return(
     <div className="container">
-      <NumericStep />
+      <h1>master</h1>
     </div>
   );
 };
