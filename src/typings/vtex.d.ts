@@ -8,7 +8,7 @@ declare global {
    
    interface Schema {
       title: string;
-      type: SchemaType;
+      type: Extract<SchemaType, 'object'>;
       default?: any;
       properties: SchemaProperties;
    }
@@ -20,7 +20,7 @@ export interface SchemaProperties {
   __editorItemTitle?: {
     default: string
     title: string
-    type: SchemaType
+    type: Extract<SchemaType, 'string'>
   },
    [key: string]: {
       type: SchemaType;
