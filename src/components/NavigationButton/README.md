@@ -26,6 +26,8 @@
                assumenda ipsa fugit dolore repellat! Reiciendis quo magni eligendi sequi doloremque.
             </p>
             </div>
+
+            <div style={{ height: '150vh' }}/>
          </div>
       );
    };
