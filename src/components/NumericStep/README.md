@@ -26,7 +26,7 @@
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `size`  | `string` | Stepper size `small` | `medium` | `large` | `small` |
+| `size`  | `string` | Stepper size `small` - `medium` - `large` | `small` |
 | `limit`  | `number` | Stepper number limit  | `10` |
 | `onChangeNumber`  | `function<Params>` | A callback function that fires when decremeting | `() => {}`| 
 
@@ -38,8 +38,8 @@
 
 ## 🔖 Layout
 
-<p align="left">
- 
+<p align="left"> 
+<img width="199" alt="Contador Numérico" src="https://user-images.githubusercontent.com/61842405/154809102-87d24ac9-eeb4-426c-a7e7-1de21516bf3e.png">
 </p>
 
 ## 👨🏻‍💻 Developers
