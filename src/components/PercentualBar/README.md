@@ -11,8 +11,12 @@
 
    const Example: FunctionComponent = () => {
       return(
-         <div>
-            <div style={{ height: '220vh'}}/> 
+         <div className="container">
+            {
+            Array.from({ length: 6 }, (_, index) => (
+               <div style={{ height: '200vh' }} key={String(index)}/>
+            ))
+            }
             <BarPercentual />
          </div>
       );

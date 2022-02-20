@@ -4,12 +4,11 @@ import { BarPercentual } from './components/PercentualBar';
 const App: FunctionComponent = () => {
   return(
     <div className="container">
-      <div style={{ height: '200vh' }}/>
-      <div style={{ height: '200vh' }}/>
-      <div style={{ height: '200vh' }}/>
-      <div style={{ height: '200vh' }}/>
-      <div style={{ height: '200vh' }}/>
-      <div style={{ height: '200vh' }}/>
+      {
+        Array.from({ length: 6 }, (_, index) => (
+          <div style={{ height: '200vh' }} key={String(index)}/>
+        ))
+      }
       <BarPercentual />
     </div>
   );
