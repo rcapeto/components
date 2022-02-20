@@ -1,9 +1,16 @@
 import { FunctionComponent } from 'react';
+import { BarPercentual } from './components/PercentualBar';
 
 const App: FunctionComponent = () => {
   return(
     <div className="container">
-      <h1>master</h1>
+      <div style={{ height: '200vh' }}/>
+      <div style={{ height: '200vh' }}/>
+      <div style={{ height: '200vh' }}/>
+      <div style={{ height: '200vh' }}/>
+      <div style={{ height: '200vh' }}/>
+      <div style={{ height: '200vh' }}/>
+      <BarPercentual />
     </div>
   );
 };

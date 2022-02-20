@@ -9,10 +9,8 @@ export const useDOM = () => {
    
       if(maxScreen) console.log('Screen End');
    
-     if(windowBottomPosition > elementTop && elementBottom > 0) 
-         return true;
-      else
-         return false;
+      if(windowBottomPosition > elementTop && elementBottom > 0) return true;
+      else return false;
    };
    
    //nodeType
