@@ -31,7 +31,8 @@
 ## 🔖 Layout
 
 <p align="left">
-   
+   <img width="665" alt="Accordion Active" src="https://user-images.githubusercontent.com/61842405/154866102-877ebef8-e8ce-4f81-8576-736f26f2c73d.png">
+
 </p>
 
 
