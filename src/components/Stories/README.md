@@ -115,29 +115,15 @@
 
 ## 🔖 Layout
 
-<h5>Success Toast</h5>
 <br/>
 <p align="left">
-  <img width="375" alt="Success Toast Message" src="https://user-images.githubusercontent.com/61842405/154569835-86ba73e9-548d-4683-9413-c3be0040a644.png">
-</p>
+   
 
-<h5>Error Toast</h5>
-<br/>
-<p align="left">
-  <img width="375" alt="Error Toast Message" src="https://user-images.githubusercontent.com/61842405/154569958-a830d29b-7318-407a-9320-11ccde3610db.png">
-</p>
+https://user-images.githubusercontent.com/61842405/154864497-d5c5072e-681c-4e4e-a1a0-056208c0d5e5.mov
 
+ <br/>
+<img width="384" alt="Stories in Mobile" src="https://user-images.githubusercontent.com/61842405/154864511-6543b087-f7bd-4615-b402-515c213bcf69.png">
 
-<h5>Info Toast</h5>
-<br/>
-<p align="left">
-  <img width="375" alt="Info Toast Message" src="https://user-images.githubusercontent.com/61842405/154569716-b3ddc66e-96be-4902-a36b-5f7cb092f950.png">
-</p>
-
-<h5>Warning Toast</h5>
-<br/>
-<p align="left">
-  <img width="375" alt="Warning Toast Message" src="https://user-images.githubusercontent.com/61842405/154569913-03e8a06f-9dc2-45b4-8500-3bfb1b69285e.png">
 </p>
 
 
