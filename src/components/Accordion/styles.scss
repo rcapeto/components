@@ -1,0 +1,55 @@
+.rcapeto-component--Accordion-Container {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   max-width: 425px;
+   width: 100%;
+   padding: var(--padding-2);
+   border-radius: var(--border-radius-2);
+   box-shadow: 4px 4px 8px 0 rgb(0 0 0 / 20%);
+   background-color: var(--purple);
+   border: 1px solid var(--purple-dark);
+
+   svg {
+      transition: all ease .5s
+   }
+
+   &.is--active {
+      svg {
+         transform: rotate(90deg);
+      }
+
+      .rcapeto-component--Accordion-Content  {
+         height: 100%;
+         transition: all ease .5s;
+         opacity: 1;
+      }
+   }
+};
+
+.rcapeto-component--Accordion-Header {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   cursor: pointer;
+   gap: 5px;
+
+   h5 {
+      color: var(--white);
+      font-size: .75rem;
+      line-height: 1rem;
+      font-weight: 400;
+   }
+};
+
+.rcapeto-component--Accordion-Content {
+   height: 0;
+   opacity: 0;
+   
+   p {
+      color: var(--white);
+      font-size: .7rem;
+      line-height: .8rem;
+      font-weight: 300;
+   }
+};
