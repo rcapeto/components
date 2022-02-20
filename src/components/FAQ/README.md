@@ -5,7 +5,7 @@
 ### Accordion
 ```jsx
    import { FunctionComponent } from 'react';
-   import { Accordion } from './components/Accordion';
+   import { FAQ } from './components/FAQ';
 
    const Example: FunctionComponent = () => {
       const items = [
