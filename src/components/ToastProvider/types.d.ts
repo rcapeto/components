@@ -3,7 +3,7 @@ export interface IToastProvider {
    props?: Props;
 };
 
-interface Props {
+export interface Props {
    positionX: 'left' | 'right';
    positionY: 'top' | 'bottom';
 };
