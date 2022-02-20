@@ -1,0 +1,45 @@
+.rcapeto-component--Stories-Container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+
+   @media (max-width: 675px) {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   @media (max-width: 450px) {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}
+
+.rcapeto-component--Story-Item-Container {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   align-items: center;
+
+   img {
+      border-radius: 100%;
+      width: 200px;
+      height: 190px;
+      cursor: pointer;
+      border: 4px solid var(--green);
+      transition: filter ease .5s;
+
+      &:hover {
+         filter: brightness(.9);
+      }
+
+      &.was--watched {
+         border-color: var(--text);
+      }
+   }
+   
+   h3 {
+      color: var(--text);
+      font-weight: 600;
+      font-size: 1.3rem;
+      width: 100%;
+      text-align: center;
+   }
+}
