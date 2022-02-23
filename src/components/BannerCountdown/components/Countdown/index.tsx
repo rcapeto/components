@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import './styles.scss'
 import Loading from '../Loading';
+type ClockData = string | number;
 
 const Countdown: FunctionComponent<CountDownProps> = ({
   text = 'Oferta acaba em',
@@ -16,22 +17,22 @@ const Countdown: FunctionComponent<CountDownProps> = ({
   const [loading, setLoading] = useState(true)
   const [showCounter, setShowCounter] = useState(false)
   const countdownDate = new Date(dataFinish)
-  const [dateTime, setDateTime] = useState({ hoursFomated: `0`, minutesFomated: `0`, secondsFomated: `0` })
-  const { hoursFomated, minutesFomated, secondsFomated } = dateTime
+  const [dateTime, setDateTime] = useState({ hours: '0', minutes: '0', seconds: '0' })
+  const { hours, minutes, seconds } = dateTime
 
   const setNewTime = () => {
     const currentTime = new Date()
     if (currentTime < countdownDate) {
       const distanceToDate = Math.abs(currentTime.getTime() - countdownDate.getTime());
 
-      let days = Math.floor(distanceToDate / (1000 * 60 * 60 * 24)),
-        hours = Math.floor((distanceToDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + days * 24,
-        minutes = Math.floor((distanceToDate % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds = Math.floor((distanceToDate % (1000 * 60)) / 1000),
-        hoursFomated = hours < 10 ? `0${hours}` : `${hours}`,
-        minutesFomated = minutes < 10 ? `0${minutes}` : `${minutes}`,
-        secondsFomated = seconds < 10 ? `0${seconds}` : `${seconds}`;
-      setDateTime({ hoursFomated, minutesFomated, secondsFomated });
+      let days:ClockData = Math.floor(distanceToDate / (1000 * 60 * 60 * 24)),
+        hours:ClockData = Math.floor((distanceToDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + days * 24,
+        minutes:ClockData = Math.floor((distanceToDate % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds:ClockData = Math.floor((distanceToDate % (1000 * 60)) / 1000);
+        hours =   String(hours).padStart(2, '0');
+        minutes = String(minutes).padStart(2, '0');
+        seconds = String(seconds).padStart(2, '0');
+      setDateTime({ hours, minutes, seconds });
       setShowCounter(true);
     } else {
       setShowCounter(false);
@@ -64,7 +65,7 @@ const Countdown: FunctionComponent<CountDownProps> = ({
           <ul className={`gbcintra-components--bannerCountDownBFCounter`}>
             <li className={`gbcintra-components--bannerCountDownBFCounterBox`}>
               <div className={`gbcintra-components--bannerCountDownBFCounterItem`}>
-                {hoursFomated}
+                {hours}
               </div>
               <div className={`gbcintra-components--bannerCountDownBFCounterText`}>
                 Horas
@@ -72,7 +73,7 @@ const Countdown: FunctionComponent<CountDownProps> = ({
             </li>
             <li className={`gbcintra-components--bannerCountDownBFCounterBox`}>
               <div className={`gbcintra-components--bannerCountDownBFCounterItem`}>
-                {minutesFomated}
+                {minutes}
               </div>
               <div className={`gbcintra-components--bannerCountDownBFCounterText`}>
                 Minutos
@@ -80,7 +81,7 @@ const Countdown: FunctionComponent<CountDownProps> = ({
             </li>
             <li className={`gbcintra-components--bannerCountDownBFCounterBox`}>
               <div className={`gbcintra-components--bannerCountDownBFCounterItem`}>
-                {secondsFomated}
+                {seconds}
               </div>
               <div className={`gbcintra-components--bannerCountDownBFCounterText`}>
                 Segundos

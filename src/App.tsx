@@ -11,7 +11,7 @@ const array: ContentBannerProps[] = [
       text:'Oferta termina em :',
       countdownUse:true,
       dataInit:'2022-02-17T08:00:00.000Z',
-      dataFinish:'2022-02-18T03:46:00.000Z'
+      dataFinish:'2022-02-24T03:46:00.000Z'
     }
   },
   {
