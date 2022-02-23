@@ -39,6 +39,7 @@
 }
 
 .gbcintra-components--bannerCountDownBFCounterBox {
+    position: relative;
     border-radius: 4px;
     height: 42px;
     width: 42px;
@@ -46,9 +47,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform-origin: center top;
-    animation-fill-mode: both;
-    animation: flipBottom 0.6s cubic-bezier(.15, .45, .28, 1); // 0.3s;
+    
 
     &:first-child::before {
         content: "";
