@@ -1,40 +1,34 @@
 import { useEffect, useState } from 'react';
 
-import { IUseTimer, initialState } from './types';
-import { ONE_SECOND_IN_MILLIS } from './config';
-import { hasEndTimer,  parseTimeRemaining } from './utils';
+import { ONE_SECOND_IN_MS, parseTimeRemaining } from './utils';
 
-// dateFormat => '2022-02-17T05:50:38.415Z'
-export const useTimer = (date: string): IUseTimer | ErrorConstructor => {
-   const [state, setState] = useState<IUseTimer>(initialState);
-
-   if(!date) throw new Error('error [useTimer]: Please set one date to start the counter.');
-
-   const updateTimer = () => {
-      const now = new Date();
-      const finalDate = new Date(date);
-   
-      const nowTime = now.getTime();
-      const finalDateTime = finalDate.getTime();
-      const secondsLeft = finalDateTime - nowTime;
-
-      const hasEnd = hasEndTimer(date);
-
-      if(secondsLeft > 0) {
-         const timing = parseTimeRemaining(secondsLeft);
-         setState({ ...timing, hasEnd });
-
-      } else {
-         setState({
-            ...initialState,
-            hasEnd
-         });
-      }
-   };
+export const useTimer = (finalDate: string) => {
+   const seconds = (new Date(finalDate).getTime() - new Date().getTime()) / ONE_SECOND_IN_MS;
+   const [secondsRemain, setSecondsRemain] = useState<number>(seconds);
+   const [state, setState] = useState({ seconds: 0, minutes: 0, days: 0, hours: 0 });
+   const [active, setActive] = useState(true);
 
    useEffect(() => {
-      !state.hasEnd && setTimeout(updateTimer, ONE_SECOND_IN_MILLIS);
-   }, [date]);
+      if(secondsRemain <= 0) { 
+         setActive(false);
+         return;
+      };
 
-   return { ...state };
+      setState(parseTimeRemaining(secondsRemain));
+      
+      setTimeout(() => {
+         setSecondsRemain(state => state - 1);
+      }, ONE_SECOND_IN_MS);
+   }, [secondsRemain]);
+
+
+   return {
+      secondsRemain,
+      ...state,
+      secondsSTR: String(state.seconds).padStart(2, '0'),
+      minutesSTR: String(state.minutes).padStart(2, '0'),
+      hoursSTR: String(state.hours).padStart(2, '0'),
+      daysSTR: String(state.days).padStart(2, '0'),
+      active
+   };
 };

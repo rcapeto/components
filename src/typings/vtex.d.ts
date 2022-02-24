@@ -30,7 +30,7 @@ export interface SchemaProperties {
       title?: string;
       description?: string;
       properties?: SchemaProperties;
-      format?: 'date-time' | "RichText",
+      format?: 'date-time',
       widget?: {
          "ui:widget"?: "image-uploader" | "datetime"
       },

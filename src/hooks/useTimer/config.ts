@@ -1,3 +1,0 @@
-export const ONE_SECOND_IN_MILLIS = 1000;
-export const SECONDS_IN_MINUTE = 60;
-export const SECONDS_IN_HOUR = 60 * SECONDS_IN_MINUTE;
