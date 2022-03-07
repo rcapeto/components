@@ -1,4 +1,6 @@
-import { FunctionComponent } from 'react';
+import { Settings } from 'react-slick';
+import BannerCountdoun from './components/BannerCountdown';
+import { ContentBannerProps } from './components/BannerCountdown/types';
 
 import { useTimer } from './hooks/useTimer';
 
