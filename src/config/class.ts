@@ -1,3 +1,4 @@
 export const classes = {
-   base: 'rcapeto-component--'
+   base: 'rcapeto-component--',
+   baseG: 'gbcintra-component--'
 };
