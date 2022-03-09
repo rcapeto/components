@@ -1,49 +1,52 @@
-# Component [NavigationButton]
+# Component [ShareButton]
 
 
 ## 🚀 How to use
 
-### NavigationButton
+### ShareButton
 ```jsx
-   import { FunctionComponent } from 'react';
+    import { ShareButton } from './components/ShareButton';
 
-   import { NavigationButton } from './components/NavigationButton';
-
-   const Example: FunctionComponent = () => {
-      return(
-         <div className="container">
-            <NavigationButton 
-               sectionId="content"
+    const Example: FunctionComponent = () => {
+        return (
+            <ShareButton
+                textButton='Compartilhar'
+                message='Confira só isso'
+                colorPrimary='#fff'
+                backgroundPrimary='#000'
+                colorSecondary='#000'
+                backgroundSecondary='#dcdde0'
+                facebook
+                twitter
+                pinterest
+                linkedin
+                email
+                telegram
+                whatsapp
             />
-
-            <div style={{ height: '150vh' }}/>
-            
-            <div id={'content'}>
-            <h1>Content</h1>
-            <p>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-               Deleniti nisi, in, excepturi culpa esse architecto quia unde libero doloremque 
-               assumenda ipsa fugit dolore repellat! Reiciendis quo magni eligendi sequi doloremque.
-            </p>
-            </div>
-
-            <div style={{ height: '150vh' }}/>
-         </div>
-      );
-   };
+        );
+    };
 
 ```
 
 ## 💻 Documentation
 
-### NavigationButton props
+### ShareButton props
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `sectionId`  | `string` | Has overlay background `required`| `-` |
-| `text`  | `string` | Button text | `Navigation Button`|
-| `color`  | `string` | Content of Modal | `#fff`|
-| `backgroundColor`  | `string` | Content of Modal | `#5965e0`|
+| `textButton`  | `string` | Button text | `Navigation Button`|
+| `message`  | `string` | Message share | `Navigation Button`|
+| `colorPrimary`  | `string` | Font color button | `#fff`|
+| `backgroundPrimary`  | `string` | Background color button | `#000`|
+| `colorSecondary`  | `string` | Content of Modal | `#000`|
+| `facebook`  | `boolean` | Option of Share facebook visibly | `false`|
+| `twitter`  | `boolean` | Option of Share twitter visibly | `false`|
+| `pinterest`  | `boolean` | Option of Share pinterest visibly | `false`|
+| `linkedin`  | `boolean` | Option of Share linkedin visibly | `false`|
+| `email`  | `boolean` | Option of Share email visibly | `false`|
+| `telegram`  | `boolean` | Option of Share telegram visibly | `false`|
+| `whatsapp`  | `boolean` | Option of Share whatsapp visibly | `false`|
 
 ## 🔖 Layout
 
@@ -56,6 +59,6 @@ https://user-images.githubusercontent.com/61842405/154787355-960ffc0d-f9cc-4307-
 </p>
 
 ## 👨🏻‍💻 Developers
-- Raphael Capeto
+- Gabriel Cintra
 
 
