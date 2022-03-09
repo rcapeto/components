@@ -39,7 +39,8 @@
 | `message`  | `string` | Message share | `Navigation Button`|
 | `colorPrimary`  | `string` | Font color button | `#fff`|
 | `backgroundPrimary`  | `string` | Background color button | `#000`|
-| `colorSecondary`  | `string` | Content of Modal | `#000`|
+| `colorSecondary`  | `string` | Color icons | `#000`|
+| `backgroundSecondary`  | `string` | Background color icons | `#000`|
 | `facebook`  | `boolean` | Option of Share facebook visibly | `false`|
 | `twitter`  | `boolean` | Option of Share twitter visibly | `false`|
 | `pinterest`  | `boolean` | Option of Share pinterest visibly | `false`|
