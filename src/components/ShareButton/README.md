@@ -51,10 +51,10 @@
 ## 🔖 Layout
 
 <p align="center">
-   
+    
 
-https://user-images.githubusercontent.com/61842405/154787355-960ffc0d-f9cc-4307-ab7a-37f0d827c682.mov
-
+https://user-images.githubusercontent.com/15270961/157363574-3ad5183e-1694-429f-bbb9-0ca8c036f369.mov
+    
 
 </p>
 
