@@ -1,7 +1,7 @@
 # Hook [useRandomString]
 
-- Hook that returns countdown values.
-- Styling must be done
+- Hook that returns random string.
+- Perfect to use in password's
 
 ## 🚀 How to use
 
