@@ -1,22 +1,9 @@
-import { ShareButton } from './components/ShareButton';
+import { useRandomString } from "./hooks/useRandomString";
 
 const App = () => {
+  const { randomString } = useRandomString();
   return (
-    <ShareButton
-      textButton='Compartilhar'
-      message='Confira só isso'
-      colorPrimary='#fff'
-      backgroundPrimary='#000'
-      colorSecondary='#000'
-      backgroundSecondary='#dcdde0'
-      facebook
-      twitter
-      pinterest
-      linkedin
-      email
-      telegram
-      whatsapp
-    />
+    <h1>Random Number: {randomString}</h1>
   );
 };
 

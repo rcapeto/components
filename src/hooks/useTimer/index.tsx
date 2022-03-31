@@ -6,7 +6,7 @@ export const useTimer = (finalDate: string) => {
    const seconds = (new Date(finalDate).getTime() - new Date().getTime()) / ONE_SECOND_IN_MS;
    const [secondsRemain, setSecondsRemain] = useState<number>(seconds);
    const [state, setState] = useState({ seconds: 0, minutes: 0, days: 0, hours: 0 });
-   const [active, setActive] = useState(true);
+   const [active, setActive] = useState(seconds > 0);
 
    useEffect(() => {
       if(secondsRemain <= 0) { 
