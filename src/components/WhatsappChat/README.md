@@ -30,7 +30,7 @@
 | `visible`  | `boolean` | Option of Whatsapp Chat visibly `required` | `true`|
 | `phone`  | `string` | DDI DDD PhoneNumber `required`| `5516999999999`|
 | `pulse`  | `boolean` | Pulse button | `true`|
-| `position`  | `PositionType` | Position Whatsapp Chat Button | `PositionType`|
+| `position`  | `string` | Position Whatsapp Chat Button | `PositionType`|
 | `message`  | `string` | Color icons | `Mensagem`|
 
 - PositionType: `bottom-right`, `bottom-left`, `bottom-center` , `top-right`, `top-left`, `top-center` or `center`
