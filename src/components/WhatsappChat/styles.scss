@@ -1,0 +1,97 @@
+.gbcintra-component-- {
+   &WhatsappChat-wrap {
+      position: fixed;
+      &:focus {
+         border: 0;
+         outline: none;
+         box-shadow: none;
+      }
+   }
+   &bottom-right{
+      bottom: 40px;
+      right: 40px;
+   }
+   &bottom-left{
+      bottom: 40px;
+      left: 40px;
+   }
+   &bottom-center{
+      bottom: 40px;
+      right: 50%;
+   }
+   &top-right{
+      top: 40px;
+      right: 40px;
+   }
+   &top-left{
+      top: 40px;
+      left: 40px;
+   }
+   &top-center{
+      top:40px;
+      left:50%;
+   }
+   &center{
+      left:50%;
+      top:50%;
+   }
+   
+
+   &WhatsappChat-Container {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #25d366;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 18px;
+      position: relative;
+      cursor: pointer;
+      &:focus {
+         border: 0;
+         outline: none;
+         box-shadow: none;
+      }
+      
+      i {
+         font-size: 24px;
+         height: 35px;
+         transition: all .3s ease;
+      }
+   }
+
+   &WhatsappChat-Pulse {
+      &::after,
+      &::before{
+         content: '';
+         position: absolute;
+         left: -10px;
+         top: -10px;
+         bottom: -10px;
+         right: -10px;
+         border-radius: 50%;
+         border: 1px solid #25d366;
+         animation: pulse 1.5s linear infinite;
+      }
+      &::after{
+         animation-delay: .4s;
+      }
+
+      @keyframes pulse {
+         0%{
+            transform: scale(.5);
+            opacity: 0;
+         }
+         50%{
+            transform: scale(1);
+            opacity: 1;
+         }
+         100%{
+            transform: scale(1.4);
+            opacity: 0;
+         }
+      }
+   }
+}

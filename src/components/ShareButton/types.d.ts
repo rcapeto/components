@@ -5,11 +5,20 @@ export interface IShareButton {
    backgroundPrimary?: string;
    colorSecondary?: string;
    backgroundSecondary?: string;
-   facebook?:boolean;
-   twitter?:boolean;
-   pinterest?:boolean;
-   linkedin?:boolean;
-   email?:boolean;
-   telegram?:boolean;
-   whatsapp?:boolean;
+   items?: ShareItem[];
 };
+
+export type ShareItem = {
+   type: ShareItemType,
+   active: boolean,
+   title: string,
+};
+
+export type ShareItemType = 
+   'whatsapp' | 
+   'facebook' | 
+   'twitter' | 
+   'pinterest' | 
+   'email' | 
+   'telegram' | 
+   'linkedin'

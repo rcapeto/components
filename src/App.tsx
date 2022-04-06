@@ -1,9 +1,14 @@
-import { useRandomString } from "./hooks/useRandomString";
+import { WhatsappChat } from "./components/WhatsappChat";
 
 const App = () => {
-  const { randomString } = useRandomString();
   return (
-    <h1>Random Number: {randomString}</h1>
+    <WhatsappChat
+      visible
+      phone='5516999999999'
+      pulse
+      message='Preciso de ajuda com isso:'
+      position='bottom-right'
+    />
   );
 };
 
