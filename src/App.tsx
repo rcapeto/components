@@ -1,14 +1,13 @@
-import { ShareButton } from './components/ShareButton';
+import { WhatsappChat } from "./components/WhatsappChat";
 
 const App = () => {
   return (
-    <ShareButton
-      textButton='Compartilhar'
-      message='Confira só isso'
-      colorPrimary='#fff'
-      backgroundPrimary='#000'
-      colorSecondary='#000'
-      backgroundSecondary='#dcdde0'
+    <WhatsappChat
+      visible
+      phone='5516999999999'
+      pulse
+      message='Preciso de ajuda com isso:'
+      position='bottom-right'
     />
   );
 };

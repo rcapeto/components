@@ -40,7 +40,7 @@
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | `title`  | `string` | Text of title attribute `required` | `Navigation Button`|
-| `type`  | `IconType` | Icon type `required` | `itemType`|
+| `type`  | `IconType` | Icon type `required` | `IconType`|
 | `active`  | `boleean` | Collection of share items `required`| - |
 
 - IconType: `whatsapp`, `facebook`, `twitter`, `pinterest`, `email`, `telegram` or `linkedin`
