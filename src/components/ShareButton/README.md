@@ -16,13 +16,6 @@
                 backgroundPrimary='#000'
                 colorSecondary='#000'
                 backgroundSecondary='#dcdde0'
-                facebook
-                twitter
-                pinterest
-                linkedin
-                email
-                telegram
-                whatsapp
             />
         );
     };
@@ -41,14 +34,16 @@
 | `backgroundPrimary`  | `string` | Background color button | `#000`|
 | `colorSecondary`  | `string` | Color icons | `#000`|
 | `backgroundSecondary`  | `string` | Background color icons | `#000`|
-| `facebook`  | `boolean` | Option of Share facebook visibly | `false`|
-| `twitter`  | `boolean` | Option of Share twitter visibly | `false`|
-| `pinterest`  | `boolean` | Option of Share pinterest visibly | `false`|
-| `linkedin`  | `boolean` | Option of Share linkedin visibly | `false`|
-| `email`  | `boolean` | Option of Share email visibly | `false`|
-| `telegram`  | `boolean` | Option of Share telegram visibly | `false`|
-| `whatsapp`  | `boolean` | Option of Share whatsapp visibly | `false`|
+| `items`  | `Item[]` | Collection of share items | `[]`|
 
+### Item props
+| Prop | Type | Description                                                                                                                                         | Default Value |
+| --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| `title`  | `string` | Text of title attribute `required` | `Navigation Button`|
+| `type`  | `IconType` | Icon type `required` | `itemType`|
+| `active`  | `boleean` | Collection of share items `required`| - |
+
+- IconType: `whatsapp`, `facebook`, `twitter`, `pinterest`, `email`, `telegram` or `linkedin`
 ## 🔖 Layout
 
 <p align="center">

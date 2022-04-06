@@ -9,13 +9,6 @@ const App = () => {
       backgroundPrimary='#000'
       colorSecondary='#000'
       backgroundSecondary='#dcdde0'
-      facebook
-      twitter
-      pinterest
-      linkedin
-      email
-      telegram
-      whatsapp
     />
   );
 };
