@@ -17,6 +17,7 @@ const Banner: FunctionComponent<ContentBannerProps> = ({
     dataInit: '',
     text: '',
   }
+  
 }) => {
 
   return (
