@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { ContentBannerProps, IBannerProps } from './types';
-import Banner from './components/Banner';
+import Banner from './components/banner';
 
 const defaultSettings: Settings = {
     arrows: true,
