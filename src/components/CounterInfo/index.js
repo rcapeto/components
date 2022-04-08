@@ -9,10 +9,15 @@ import Stamp from './Stamp';
 // const CounterInfo: FunctionComponent<CounterInfoProps> = ({ 
 const CounterInfo = ({ 
   dataInitial='04/04/2022',
-  dataFinal ='07/04/2022 00:36' ,
-  counterType = 'banner' 
+  dataFinal ='08/04/2022 13:01' ,
+  counterType = 'stamp' 
 }) => {
-  const currentDate = (date) => (new Date(Date.parse(date)));
+
+  const currentDate = (date)=> {
+    const [day, month, year] = date.split('/');
+    return new Date([month, day, year].join('/'));
+  }
+
   const initialDate = currentDate(dataInitial).toISOString();
   const finalDate = currentDate(dataFinal).toISOString();
 

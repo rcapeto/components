@@ -4,7 +4,7 @@ import { useTimer } from '../../../hooks/useTimer';
 import { useCounter } from '../Context';
 import Loading from '../Loading';
 
-import './style.css';
+import './style.scss';
 
 
 const Stamp = ({ finalDate }) => {
@@ -27,10 +27,10 @@ const Stamp = ({ finalDate }) => {
     <>
       {active &&
         <div
-          className={`${baseClass['container-offter-counter']} ba b--light-silver br2 bg-white flex flex-row-ns flex-column justify-center items-center`}
+          className={`${baseClass}container-offter-counter ba b--light-silver br2 bg-white flex flex-row-ns flex-column justify-center items-center`}
         >
             <p
-              className={`${baseClass['stopwatch-info-counter']} white b flex items-center ma0`}
+              className={`${baseClass}stopwatch-info-counter white b flex items-center ma0`}
             >
               Oferta limitada {hoursSTR}:{minutesSTR}:{secondsSTR}
             </p>

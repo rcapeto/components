@@ -1,10 +1,12 @@
-import CounterInfo from "./components/CounterInfo";
+import { FunctionComponent } from 'react';
+import CounterInfo from './components/CounterInfo';
 
-const App = () => {
-  return (
-    <CounterInfo
-    />
-  );
-};
+   const App: FunctionComponent = () => {
+      return(
+         <div className="container">
+            <CounterInfo/>
+         </div>
+      );
+   };
 
 export default App;
