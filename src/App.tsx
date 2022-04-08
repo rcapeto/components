@@ -1,13 +1,8 @@
-import { WhatsappChat } from "./components/WhatsappChat";
+import CounterInfo from "./components/CounterInfo";
 
 const App = () => {
   return (
-    <WhatsappChat
-      visible
-      phone='5516999999999'
-      pulse
-      message='Preciso de ajuda com isso:'
-      position='bottom-right'
+    <CounterInfo
     />
   );
 };
