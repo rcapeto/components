@@ -48,6 +48,6 @@ https://user-images.githubusercontent.com/15270961/161901294-5908c624-1aee-4652-
 </p>
 
 ## 👨🏻‍💻 Developers
-- Gabriel Cintra
+- [Gabriel Cintra](https://github.com/gblcintra)
 
 
