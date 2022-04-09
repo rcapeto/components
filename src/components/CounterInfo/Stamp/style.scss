@@ -1,0 +1,15 @@
+.gbcintra-component--container-offter-counter {
+  display:flex;
+  user-select: none;
+  margin-top: -1px;
+  margin-left: -1px;
+  .gbcintra-component--stopwatch-info-counter{
+    background: #FB7509;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+}
+
