@@ -7,7 +7,7 @@ import { WhatsappChat } from './components/WhatsappChat';
          <div className="container">
             <CounterInfo 
                dataInitial='04/04/2022'
-               counterType='stamp'
+               counterType='banner'
                dataFinal='09/04/2022 22:17' 
             />
          </div>
