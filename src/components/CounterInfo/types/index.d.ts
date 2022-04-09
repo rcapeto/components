@@ -1,10 +1,15 @@
 export interface ICounterInfo {
-    dataInitial?: string;
-    dataFinal?: string;
-    counterType?: CounterTypeProps;
+    dataInitial: string;
+    dataFinal: string;
+    counterType: CounterTypeProps;
 }
-export interface ICounterProvider extends ICounterInfo {
-    children:any
+export interface ICounterProvider {
+    children:any;
+    dataInitial: string;
+    dataFinal: string;
+}
+export interface IStamp {
+    finalDate: string;
 }
 
 type CounterTypeProps = 

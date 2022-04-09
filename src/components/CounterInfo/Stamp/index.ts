@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import { classes } from '../../../config/class';
 import { useTimer } from '../../../hooks/useTimer';
 import { useCounter } from '../Context';
 import Loading from '../Loading';
+import { IStamp } from '../types';
 
 import './style.scss';
 
+export type StampProps = IStamp;
 
-const Stamp = ({ finalDate }) => {
+const Stamp:FunctionComponent<StampProps> = ({ finalDate }) => {
   const [loading, setLoading] = useState(true);
   const baseClass = classes.baseG;
   const { secondsSTR, minutesSTR, hoursSTR, active } = useTimer(finalDate);

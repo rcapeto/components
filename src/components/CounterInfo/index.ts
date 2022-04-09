@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { CounterProvider } from './Context';
-// import { ICounterInfo } from './types';
+import { ICounterInfo } from './types';
 import Banner from './Banner';
 import Stamp from './Stamp';
 
-// export type CounterInfoProps = ICounterInfo
+export type CounterInfoProps = ICounterInfo;
 
-// const CounterInfo: FunctionComponent<CounterInfoProps> = ({ 
-const CounterInfo = ({ 
+const CounterInfo: FunctionComponent<CounterInfoProps> = ({ 
+// const CounterInfo = ({ 
   dataInitial='04/04/2022',
-  dataFinal ='08/04/2022 13:01' ,
+  dataFinal ='08/04/2022 22:17' ,
   counterType = 'stamp' 
 }) => {
 
@@ -22,6 +22,7 @@ const CounterInfo = ({
   const finalDate = currentDate(dataFinal).toISOString();
 
   return (
+    <>
     <CounterProvider
       initialDate={initialDate}
       finalDate={finalDate}
@@ -30,6 +31,7 @@ const CounterInfo = ({
       {(counterType === 'banner') && <Banner finalDate={finalDate}/>}
       {(counterType === 'stamp') && <Stamp finalDate={finalDate} />}
     </CounterProvider>
+    </>
   )
 }
 

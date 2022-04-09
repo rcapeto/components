@@ -1,16 +1,16 @@
 import React, { useContext, createContext, useState, FunctionComponent } from 'react';
 import { classes } from '../../../config/class';
-// import { ICounterProvider } from '../types';
+import { ICounterProvider } from '../types';
 const CounterContext = createContext({});
 
-// export type CounterProviderProps = ICounterProvider
+export type CounterProviderProps = ICounterProvider
 
-// export const CounterProvider: FunctionComponent<CounterProviderProps> = ({ 
-export const CounterProvider = ({ 
-  children ,
-  initialDate , 
-  finalDate , 
-  counterType 
+export const CounterProvider: FunctionComponent<CounterProviderProps> = ({ 
+// export const CounterProvider = ({ 
+  children,
+  initialDate,
+  finalDate,
+  counterType
 }) => {
   const [componentShow, setComponentShow] = useState(true);
   const now = new Date().toISOString();
