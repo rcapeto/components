@@ -5,7 +5,11 @@ import { WhatsappChat } from './components/WhatsappChat';
    const App: FunctionComponent = () => {
       return(
          <div className="container">
-            <WhatsappChat phone='5516991476318' visible position='center'/>
+            <CounterInfo 
+               dataInitial='04/04/2022'
+               counterType='stamp'
+               dataFinal='09/04/2022 22:17' 
+            />
          </div>
       );
    };

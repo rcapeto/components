@@ -1,12 +1,12 @@
-import React, { useContext, createContext, useState, FunctionComponent } from 'react';
+import React, { useContext, createContext, useState } from 'react';
 import { classes } from '../../../config/class';
-import { ICounterProvider } from '../types';
+// import { ICounterProvider } from '../types';
 const CounterContext = createContext({});
 
-export type CounterProviderProps = ICounterProvider
+// export type CounterProviderProps = ICounterProvider
 
-export const CounterProvider: FunctionComponent<CounterProviderProps> = ({ 
-// export const CounterProvider = ({ 
+// export const CounterProvider: FunctionComponent<CounterProviderProps> = ({ 
+export const CounterProvider = ({ 
   children,
   initialDate,
   finalDate,
