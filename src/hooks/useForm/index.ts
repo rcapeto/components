@@ -1,14 +1,10 @@
-export interface Data {
-   [key: string]: string;
-};
-
 export interface EmptyField {
    key: string;
 };
 
 export const useForm = () => {
-   const checkEmptyFields = (data: Data, ...fieldsDontVerify: string[] ) => {
-      let hasEmptyFild = false;
+   const checkEmptyFields = (data: Record<string, string>, ...fieldsDontVerify: string[] ) => {
+      let hasEmptyField = false;
       const emptyFields: EmptyField[] = [];
 
       for(const key in data) {
@@ -17,13 +13,13 @@ export const useForm = () => {
          if(fieldsDontVerify.includes(key)) continue;
 
          if(!value) {
-            hasEmptyFild = true;
+            hasEmptyField = true;
             emptyFields.push({ key });
          }
       }
 
       return {
-         hasEmptyFild,
+         hasEmptyField,
          emptyFields,
          fields: data
       }
@@ -33,4 +29,3 @@ export const useForm = () => {
       checkEmptyFields
    }
 };
-
