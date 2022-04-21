@@ -102,14 +102,14 @@ const Example = () => {
 | `timeDispatched`  | `string` | Last time that was dispatched  | - |
 | `quantityEventsDispatched`  | `number` | Quantity events dispatched  | - |
 | `dispatchedPages`  | `Array<string>` | URL paths  | - |
-| `dispatchedEvents`  | `{[key: eventName = string]: Array<DispatchedEvent>}` | URL paths  | - |
+| `dispatchedEvents`  | `{[key: eventName = string]: Array<DispatchedEvent>}` | Events informations  | - |
 
 
 #### DispatchedEvent
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `data`  | `any` | Data was passed in dispatched function  | - |
+| `data`  | `CustomEventInit<>` | Data was passed in dispatched function  | - |
 | `location`  | `string` | Location where event was dispatched (URL)  | - |
 | `time`  | `string` | Time where event was dispatched  | - |
 
