@@ -50,7 +50,7 @@
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | `currentMonth`  | `string` | Selected month | - |
 | `currentYear`  | `number` | Selected year | - |
-| `handleChangeMonth`  | `func` | Function that dispatch actions | - |
+| `handleChangeMonth`  | `func` | Function that dispatch actions in calendar | - |
 | `calendarItems`  | `Array<CalendarItem>` | Calendar Items | - |
 
 
@@ -72,6 +72,7 @@
 ## 🔖 Layout
 
 <p align="left">
+<img width="366" alt="useCalendar example" src="https://user-images.githubusercontent.com/61842405/164389321-93d598b6-245c-4fa7-a364-cc79424e7d3d.png">
 
 </p>
 
