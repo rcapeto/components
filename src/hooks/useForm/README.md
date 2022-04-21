@@ -1,7 +1,6 @@
 # Hook [useForm]
 
-- Hook that returns calendar values.
-- Styling must be done
+- Hook that validate an object data.
 
 ## 🚀 How to use
 
