@@ -30,10 +30,10 @@ export const EventContextProvider: FunctionComponent = ({ children }) => {
       }
 
       setDispatchedEvents(clonedEvents);
-      setTimeDispatched(getCurrentTime());
+      setTimeDispatched(now);
 
       !dispatchedPages.includes(location) && 
-         setDispatchedPages([...dispatchedPages, window.location.href]);
+         setDispatchedPages([...dispatchedPages, location]);
 
       eventTarget.dispatchEvent(event);
    };
