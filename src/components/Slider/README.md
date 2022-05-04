@@ -23,7 +23,10 @@
                items.map((item, index) => (
                   <div key={index} style={{ backgroundColor: '#cecece', width: '100%', height: '100%' }}>
                      <h1>{item.title}</h1>
-                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, ipsum sequi eius dolore ?</p>
+                     <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Delectus, ipsum sequi eius dolore?
+                     </p>
                   </div>
                ))
             }
@@ -44,6 +47,7 @@
 ## 🔖 Layout
 
 <p align="center">
+<img width="1425" alt="Slider Preview" src="https://user-images.githubusercontent.com/61842405/166746716-2ecfe520-edb2-471e-9eab-f2ee5140a2f7.png">
 
 </p>
 
