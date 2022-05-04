@@ -1,4 +1,4 @@
-# Component [Slider]
+# Component [MagicScroll]
 
 
 ## 🚀 How to use
@@ -6,49 +6,47 @@
 ### Slider
 ```jsx
    import { FunctionComponent } from 'react';
-   import { Slider } from '/Slider';
+   import { MagicScroll } from '/MagicScroll';
 
    const items = [
-      { title: 'Slide 1' },
-      { title: 'Slide 2' },
-      { title: 'Slide 3' },
-      { title: 'Slide 4' },
+      { title: 'Scroll to Begin', text: 'start like this' }, 
+      { title: 'Step 1', text: 'Here is step 1' },
+      { title: 'Step 2', text: 'Here is step 2' },
+      { title: 'Step 3', text: 'Here is step 3' },
+      { title: 'Step 4', text: 'Here is step 4' },
    ];
 
 
    const Example: FunctionComponent = () => {
       return(
-         <Slider onChangeSlide={index => console.log('indexslide', index)}>
+          <MagicScroll>
             {
                items.map((item, index) => (
-                  <div key={index} style={{ backgroundColor: '#cecece', width: '100%', height: '100%' }}>
+                  <div key={String(index)} style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                      <h1>{item.title}</h1>
-                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, ipsum sequi eius dolore ?</p>
+                     <p>{item.text}</p>
                   </div>
                ))
             }
-         </Slider>
+         </MagicScroll>
       )
    };
 ```
 
 ## 💻 Documentation
 
-### Slider props
+### MagicScroll props
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `onChangeSlide`  | `func` | Callback function dispatched when slide was changed | `true` |
-| `config`  | `ConfigType` | Slider config. | `{ showDots: true, showArrows: true }` |
+| `size`  | `string` | Scroll size: `sm`, `md`, `lg`, `xl` | `md` |
+| `position`  | `string` | Content position:  `top`, `middle`, `bottom`, `between-top-middle`, `between-bottom-middle` | `between-top-middle` |
 
 ## 🔖 Layout
 
 <p align="center">
 
 </p>
-
-## Incoming features 
-- Change Slide with touch
 
 ## 👨🏻‍💻 Developers
 - Raphael Capeto
