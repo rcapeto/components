@@ -41,6 +41,7 @@
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | `size`  | `string` | Scroll size: `sm`, `md`, `lg`, `xl` | `md` |
 | `position`  | `string` | Content position:  `top`, `middle`, `bottom`, `between-top-middle`, `between-bottom-middle` | `between-top-middle` |
+| `animated`  | `boolean` | If section will be animtated | `true` |
 
 ## 🔖 Layout
 

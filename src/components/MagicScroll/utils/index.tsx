@@ -21,6 +21,10 @@ export const controlSectionsState = (
       if(elementInViewport(section)) {
          const currentTopWhenEnterInViewPort = (windowState.positionBottom - sectionState.top);
          const percent = ((currentTopWhenEnterInViewPort * 100) / (sectionState.height + windowState.height)).toFixed(2);
+
+         if(+percent > 0) {
+            elementManipulateAttribute(section, 'add', 'data-magicscroll-animate', 'true');
+         } 
          
          elementManipulateAttribute(section, 'add', 'data-magicscroll-percent', percent);
 
@@ -32,7 +36,10 @@ export const controlSectionsState = (
                elementClassManipulate(section, 'add', classes.hasSeen);
                elementManipulateAttribute(section, 'add', 'data-magicscroll-percent', '100');
             };
+         } else {
+            elementManipulateAttribute(section, 'remove', 'data-magicscroll-animate');
          }
+
          if(elementHasClass(section, classes.inViewPort)) elementClassManipulate(section, 'remove', classes.inViewPort)
       }
    }

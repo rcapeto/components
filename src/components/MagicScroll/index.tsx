@@ -11,7 +11,8 @@ export type MagicScrollPositionType = PositionType;
 export const MagicScroll: FunctionComponent<MagicScrollProps> = ({ 
    size = 'md',
    children,
-   position = 'between-top-middle'
+   position = 'between-top-middle',
+   animated = true
 }) => {
    const { elementInViewport } = useDOM();
    const sections = Children.toArray(children) as ReactElement[];
@@ -35,6 +36,7 @@ export const MagicScroll: FunctionComponent<MagicScrollProps> = ({
                   position={position} 
                   key={String(index)}
                   size={size}
+                  animated={animated}
                />
             ))
          }

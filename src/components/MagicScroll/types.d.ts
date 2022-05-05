@@ -1,6 +1,7 @@
 export interface MagicScrollProps {
    size?: SizeType;
    position?: PositionType;
+   animated?: boolean;
 };
 
 export type SizeType = 'sm' | 'md' | 'lg' | 'xl';

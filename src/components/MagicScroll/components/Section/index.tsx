@@ -7,11 +7,16 @@ interface SectionProps {
    position: PositionType;
    section: ReactElement;
    size: SizeType;
+   animated: boolean;
 };
 
-export const Section: FunctionComponent<SectionProps> = ({ section, position, size }) => {
+export const Section: FunctionComponent<SectionProps> = ({ section, position, size, animated }) => {
    return(
-      <div className={styles.sectionContainer} data-magicscroll-section-size={size} data-magicscroll-section>
+      <div 
+         className={`${styles.sectionContainer} ${animated ? styles.isAnimated : ''}`} 
+         data-magicscroll-section-size={size} 
+         data-magicscroll-section
+      >
          <div className={styles.sectionContent} data-magicscroll-section-position={position}>
             { cloneElement(section, { ...section.props }) }
          </div>
