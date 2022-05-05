@@ -1,9 +1,8 @@
 const App = () => {
   return(
     <div>
-      Master
+     <h1>Master</h1>
     </div>
-    
   )
 };
 

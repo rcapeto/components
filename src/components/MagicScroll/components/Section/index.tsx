@@ -1,4 +1,4 @@
-import { FunctionComponent, cloneElement, ReactElement, useEffect, useRef } from 'react';
+import { FunctionComponent, cloneElement, ReactElement } from 'react';
 
 import { PositionType, SizeType } from '../../types';
 import styles from './styles.module.scss';

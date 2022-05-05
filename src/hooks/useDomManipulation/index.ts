@@ -5,10 +5,10 @@ export const useDOM = () => {
       const elementBottom = element.getBoundingClientRect().bottom;
 
       //scroll position
-      const scrollTop = window.pageYOffset; //or .scrollY
+      const scrollTop = window.scrollY; //or .pageYOffset
       const windowBottomPosition = scrollTop + window.innerHeight;
 
-      return (windowBottomPosition > elementTop && elementBottom > 0);
+      return (windowBottomPosition > elementTop && elementBottom >= 0);
    };
 
    const endOfTheScreen = (): boolean => {

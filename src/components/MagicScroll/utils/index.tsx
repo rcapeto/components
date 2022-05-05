@@ -1,26 +1,39 @@
+import { elementClassManipulate, elementHasClass, elementManipulateAttribute } from '../../../utils/element';
+
 const classes = { inViewPort: 'is-in-viewport', hasSeen: 'has-seen' };
 
-export const controlSectionsState = (sections: NodeListOf<HTMLDivElement>) => {
+export const controlSectionsState = (
+   sections: NodeListOf<HTMLDivElement>,
+   elementInViewport: (element: HTMLElement) => boolean
+) => {
    for(const section of Array.from(sections)) {
-      const currentPositionY = window.scrollY;
-      const currentPositionBottom = currentPositionY + window.innerHeight;
+      const windowState = {
+         height: window.innerHeight,
+         positionBottom: window.scrollY + window.innerHeight,
+      };
 
-      const sectionTopPosition = section.offsetTop; 
-      const sectionBottomPosition = section.getBoundingClientRect().bottom;
+      const sectionState = {
+         top: section.offsetTop,
+         bottom: section.getBoundingClientRect().bottom,
+         height: section.scrollHeight,
+      };
 
-      if(currentPositionBottom >= sectionTopPosition && sectionBottomPosition >= 0) {
-         if(!section.classList.contains(classes.inViewPort)) 
-            section.classList.add(classes.inViewPort);
-         if(section.classList.contains(classes.hasSeen)) 
-            section.classList.remove(classes.hasSeen);
+      if(elementInViewport(section)) {
+         const currentTopWhenEnterInViewPort = (windowState.positionBottom - sectionState.top);
+         const percent = ((currentTopWhenEnterInViewPort * 100) / (sectionState.height + windowState.height)).toFixed(2);
+         
+         elementManipulateAttribute(section, 'add', 'data-magicscroll-percent', percent);
+
+         if(!elementHasClass(section, classes.inViewPort)) elementClassManipulate(section, 'add', classes.inViewPort);
+         if(elementHasClass(section, classes.hasSeen)) elementClassManipulate(section, 'remove', classes.hasSeen);
       } else {
-         if(sectionBottomPosition < 0) {
-            if(!section.classList.contains(classes.hasSeen)) 
-               section.classList.add(classes.hasSeen);
+         if(sectionState.bottom < 0) {
+            if(!elementHasClass(section, classes.hasSeen)) {
+               elementClassManipulate(section, 'add', classes.hasSeen);
+               elementManipulateAttribute(section, 'add', 'data-magicscroll-percent', '100');
+            };
          }
-
-         if(section.classList.contains(classes.inViewPort)) 
-            section.classList.remove(classes.inViewPort);
+         if(elementHasClass(section, classes.inViewPort)) elementClassManipulate(section, 'remove', classes.inViewPort)
       }
    }
 };

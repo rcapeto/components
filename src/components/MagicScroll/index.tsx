@@ -3,6 +3,7 @@ import { Children, FunctionComponent, ReactElement, useEffect } from 'react';
 import { MagicScrollProps, SizeType, PositionType } from './types';
 import { Section } from './components/Section';
 import { controlSectionsState } from './utils';
+import { useDOM } from '../../hooks/useDomManipulation';
 
 export type MagicScrollType = SizeType;
 export type MagicScrollPositionType = PositionType;
@@ -12,11 +13,12 @@ export const MagicScroll: FunctionComponent<MagicScrollProps> = ({
    children,
    position = 'between-top-middle'
 }) => {
+   const { elementInViewport } = useDOM();
    const sections = Children.toArray(children) as ReactElement[];
 
    function handleControlSections() {
       const htmlSections = document.querySelectorAll('[data-magicscroll-section]') as NodeListOf<HTMLDivElement>;
-      htmlSections && controlSectionsState(htmlSections);
+      htmlSections && controlSectionsState(htmlSections, elementInViewport);
    }
 
    useEffect(() => {
