@@ -68,7 +68,7 @@
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `condition`  | `bool | ConditionItem[]` | Condition to render the children `required`| `''` |
+| `condition`  | `bool` | ConditionItem[]` | Condition to render the children `required`| `''` |
 | `conditionArrayType`  | `string` | Condition configuration when condition is an array `all` or `only-one` | `only-one` |
 | `Else`  | `ReactElement` | Using to render when condition is false | `undefined` |
 
