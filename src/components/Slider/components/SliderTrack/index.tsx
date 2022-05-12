@@ -1,6 +1,7 @@
 import { cloneElement, FunctionComponent, ReactElement } from "react";
 
 import { useSlider } from '../../context';
+import { classes } from "../../../../config/class";
 import { SliderButtons } from '../SliderButtons';
 import { SliderDots } from "../SliderDots";
 
@@ -12,9 +13,10 @@ interface SliderTrack {
 
 export const SliderTrack: FunctionComponent<SliderTrack> = ({ slides }) => {
    const { showArrows, showDots, currentIndex } = useSlider();
+   const baseClass = classes.base;
 
    return(
-      <div className={styles.sliderContainer}>
+      <div className={`${styles.sliderContainer} ${baseClass}--slider-container`}>
          { showArrows && <SliderButtons /> }
 
          {

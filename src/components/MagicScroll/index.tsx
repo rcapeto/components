@@ -4,6 +4,7 @@ import { MagicScrollProps, SizeType, PositionType } from './types';
 import { Section } from './components/Section';
 import { controlSectionsState } from './utils';
 import { useDOM } from '../../hooks/useDomManipulation';
+import { classes } from '../../config/class';
 
 export type MagicScrollType = SizeType;
 export type MagicScrollPositionType = PositionType;
@@ -14,6 +15,8 @@ export const MagicScroll: FunctionComponent<MagicScrollProps> = ({
    position = 'between-top-middle',
    animated = true
 }) => {
+   const baseClass = classes.base;
+
    const { elementInViewport } = useDOM();
    const sections = Children.toArray(children) as ReactElement[];
 
@@ -28,7 +31,7 @@ export const MagicScroll: FunctionComponent<MagicScrollProps> = ({
    }, []);
 
    return(
-      <div className="magicscroll-container">
+      <div className={`${baseClass}--magicscroll-container magicscroll-container`}>
          {
             sections.map((section, index) => (
                <Section 

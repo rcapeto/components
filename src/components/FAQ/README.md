@@ -2,7 +2,7 @@
 
 ## 🚀 How to use
 
-### Accordion
+### FAQ
 ```jsx
    import { FunctionComponent } from 'react';
    import { FAQ } from './components/FAQ';

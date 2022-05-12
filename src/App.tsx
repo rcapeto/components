@@ -1,9 +1,9 @@
 const App = () => {
   return(
     <div>
-     <h1>Master</h1>
+      master
     </div>
-  )
+  );
 };
 
 export default App;

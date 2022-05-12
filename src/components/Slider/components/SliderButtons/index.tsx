@@ -2,11 +2,13 @@ import { FunctionComponent } from "react";
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
 import { useSlider } from "../../context";
+import { classes } from "../../../../config/class";
 
 import styles from './styles.module.scss';
 
 export const SliderButtons: FunctionComponent = () => {
    const { nextSlide, prevSlide } = useSlider();
+   const baseClass = classes.base;
 
    const buttons = [
       {
@@ -24,7 +26,7 @@ export const SliderButtons: FunctionComponent = () => {
    ];
 
    return(
-      <div className={styles.sliderButtonsContainer}>
+      <div className={`${styles.sliderButtonsContainer} ${baseClass}--slider-buttons-container`}>
          {
             buttons.map(({ icon: Icon, attribute, onClick, title }, index) => (
                <button 
