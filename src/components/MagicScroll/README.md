@@ -3,7 +3,7 @@
 
 ## 🚀 How to use
 
-### Slider
+### MagicScroll
 ```jsx
    import { FunctionComponent } from 'react';
    import { MagicScroll } from '/MagicScroll';
