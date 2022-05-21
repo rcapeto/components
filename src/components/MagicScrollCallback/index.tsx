@@ -10,6 +10,7 @@ import { classes } from '../../config/class';
 import { useDOM } from '../../hooks/useDomManipulation';
 import { MagicScroll } from '../MagicScroll';
 import { MagicScrollPositionType, MagicScrollType } from '../MagicScroll';
+import { elementClassManipulate, elementHasClass } from '../../utils/element';
 
 import './styles.scss';
 
@@ -40,9 +41,7 @@ export const MagicScrollCallback: FunctionComponent<Props> = ({
 
    const baseClass = classes.base;
 
-   const transformPercentageToDecimal = (percent: string) => {
-      return +(+percent / 100).toFixed(2);
-   };
+   const transformPercentageToDecimal = (percent: string) => +(+percent / 100).toFixed(2);
 
    const updateProgress = useCallback(() => {
       const contentClasses = {
@@ -57,24 +56,27 @@ export const MagicScrollCallback: FunctionComponent<Props> = ({
          const windowConfig = {
             positionBottom: window.scrollY + window.innerHeight,
             height: window.innerHeight
-         }
+         };
 
          const containerConfig = {
             top: container.offsetTop,
             bottom: container.getBoundingClientRect().bottom,
             height: container.scrollHeight,
-         }
+         };
 
          if(elementInViewport(container)) {
-            !content.classList.contains(contentClasses.inViewPort) 
-               && content.classList.add(contentClasses.inViewPort)
+            !elementHasClass(content, contentClasses.inViewPort) &&
+               elementClassManipulate(content, 'add', contentClasses.inViewPort)
             ;
 
-            content.classList.contains(contentClasses.hasCompleted) 
-               && content.classList.remove(contentClasses.hasCompleted)
+            elementHasClass(content, contentClasses.hasCompleted) &&
+               elementClassManipulate(content, 'remove', contentClasses.hasCompleted)
             ;
 
-            const currentTopWhenEnterInViewPort = (windowConfig.positionBottom - containerConfig.top);
+            const currentTopWhenEnterInViewPort = (
+               windowConfig.positionBottom - containerConfig.top
+            );
+
             const percent = (
                (currentTopWhenEnterInViewPort * 100) /
                (containerConfig.height + windowConfig.height)
@@ -82,23 +84,23 @@ export const MagicScrollCallback: FunctionComponent<Props> = ({
 
             setProgress(transformPercentageToDecimal(percent));
          } else {
-            const hasEndContent = containerConfig.bottom;
+            const hasEndContent = containerConfig.bottom <= 0;
 
-            content.classList.contains(contentClasses.inViewPort) 
-               && content.classList.remove(contentClasses.inViewPort)
+            elementHasClass(content, contentClasses.inViewPort) &&
+               elementClassManipulate(content, 'remove', contentClasses.inViewPort)
             ;
 
             if(hasEndContent) {
-               !content.classList.contains(contentClasses.hasCompleted) 
-                  && content.classList.add(contentClasses.hasCompleted)
+               !elementHasClass(content, contentClasses.hasCompleted) &&
+                  elementClassManipulate(content, 'add', contentClasses.hasCompleted)
                ;
             } else {
-               content.classList.contains(contentClasses.hasCompleted) 
-                  && content.classList.remove(contentClasses.hasCompleted)
+               elementHasClass(content, contentClasses.hasCompleted) &&
+                  elementClassManipulate(content, 'remove', contentClasses.hasCompleted)
                ;
             }
 
-            setProgress(hasEndContent <= 0 ? 1 : 0);
+            setProgress(hasEndContent ? 1 : 0);
          }
       }
    }, [elementInViewport]);
