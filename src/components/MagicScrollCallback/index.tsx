@@ -27,6 +27,8 @@ interface Props {
    }
 };
 
+export type MagicScrollCallbackProps = Props;
+
 export const MagicScrollCallback: FunctionComponent<Props> = ({ 
    children,
    contentPosition = 'middle',
