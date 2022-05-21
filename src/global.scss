@@ -83,33 +83,3 @@ a {
       font-size: 87.5%;
    }
 }
-
-.magic-test-container {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background-color: #000;
-   gap: 100px;
-};
-
-.descriptions {
-   display: flex;
-   max-width: 300px;
-   flex-direction: column;
-   gap: 20px;
-
-   p {
-      color: #fff;
-      transition: all ease .7s;
-      transform: translateY(100px);
-      opacity: 0;
-      visibility: hidden;
-      position: absolute;
-
-      &.hasActive {
-         opacity: 1;
-         transform: translateY(0px);
-         visibility: visible;
-      }
-   }
-};
