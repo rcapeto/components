@@ -1,4 +1,4 @@
-import { Children, FunctionComponent, ReactElement, useEffect } from 'react';
+import { Children, FunctionComponent, ReactElement, useEffect, useCallback } from 'react';
 
 import { MagicScrollProps, SizeType, PositionType } from './types';
 import { Section } from './components/Section';
@@ -20,15 +20,15 @@ export const MagicScroll: FunctionComponent<MagicScrollProps> = ({
    const { elementInViewport } = useDOM();
    const sections = Children.toArray(children) as ReactElement[];
 
-   function handleControlSections() {
+   const handleControlSections = useCallback(() => {
       const htmlSections = document.querySelectorAll('[data-magicscroll-section]') as NodeListOf<HTMLDivElement>;
       htmlSections && controlSectionsState(htmlSections, elementInViewport);
-   }
+   }, [elementInViewport]);
 
    useEffect(() => {
      window.addEventListener('scroll', handleControlSections);
      return () => window.removeEventListener('scroll', handleControlSections);
-   }, []);
+   }, [handleControlSections]);
 
    return(
       <div className={`${baseClass}--magicscroll-container magicscroll-container`}>

@@ -8,21 +8,29 @@ import {
 } from 'react';
 import { classes } from '../../config/class';
 import { useDOM } from '../../hooks/useDomManipulation';
+import { MagicScroll } from '../MagicScroll';
+import { MagicScrollPositionType, MagicScrollType } from '../MagicScroll';
 
 import './styles.scss';
 
-type Callback = (progress: number) => ReactNode;
+type Callback = (progress: number) => ReactNode[];
 
 interface Props {
    children: ReactNode | Callback;
    size?: number;
    contentPosition?: 'middle' | 'top' | 'bottom' | 'between-top-middle';
+   magicScrollWithoutCallbackConfig?: {
+      position: MagicScrollPositionType,
+      animated: boolean;
+      size: MagicScrollType,
+   }
 };
 
 export const MagicScrollCallback: FunctionComponent<Props> = ({ 
    children,
    contentPosition = 'middle',
    size = 4000,
+   magicScrollWithoutCallbackConfig
 }) => {
    const containerRef = useRef<HTMLDivElement>(null);
    const contentRef = useRef<HTMLDivElement>(null);
@@ -100,20 +108,26 @@ export const MagicScrollCallback: FunctionComponent<Props> = ({
       return () => window.removeEventListener('scroll', updateProgress);
    }, [updateProgress]);
 
-   return(
-      <div 
-         className={`${baseClass}magic-scroll-cb-container`}
-         ref={containerRef}
-         style={{ height: size }}
-      >
+   if(typeof children == 'function') {
+      return(
          <div 
-            className={`${baseClass}magic-scroll-cb-content ${contentPosition}`}
-            ref={contentRef}
+            className={`${baseClass}magic-scroll-cb-container`}
+            ref={containerRef}
+            style={{ height: size }}
          >
-            {
-               typeof children == 'function' ? children(progress) : children
-            }
+            <div 
+               className={`${baseClass}magic-scroll-cb-content ${contentPosition}`}
+               ref={contentRef}
+            >
+              { children(progress) }
+            </div>
          </div>
-      </div>
-   );
+      );
+   } else {
+      return(
+         <MagicScroll { ...magicScrollWithoutCallbackConfig }>
+            { children }
+         </MagicScroll>
+      );
+   }
 };

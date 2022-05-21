@@ -1,6 +1,7 @@
 # Component [MagicScrollCallback]
 
 - With this component you can manipulate the document, with callback param.
+- When you use without callback, the default magicscroll will be start.
 
 ## 🚀 How to use
 
@@ -95,13 +96,23 @@
 
 ## 💻 Documentation
 
-### MagicScroll props
+### MagicScrollCallback props
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | `size`  | `number` | Container height  | `4000` |
 | `contentPosition`  | `string` | Content position:  `top`, `between-top-middle`, `middle` and `bottom` | `middle` |
 | `children`  | `(progress: number) => ReactNode or ReactNode` |  Component Children `required` | `-` |
+| `magicScrollWithoutCallbackConfig`  | `MagicScrollProps` |  Config traditional Magic Scroll | `{ size: 'md', position: 'between-top-middle', animated: true }` |
+
+### MagicScroll props
+
+| Prop | Type | Description                                                                                                                                         | Default Value |
+| --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| `size`  | `string` | Scroll size: `sm`, `md`, `lg`, `xl` | `md` |
+| `position`  | `string` | Content position:  `top`, `middle`, `bottom`, `between-top-middle`, `between-bottom-middle` | `between-top-middle` |
+| `animated`  | `boolean` | If section will be animtated | `true` |
+
 
 ## 🔖 Layout
 
