@@ -32,26 +32,26 @@
                <MagicScrollCallback>
                   {
                      (progress) => (
-                     <div className="magic-test-container" 
-                        data-progress={progress}
-                     >
-                        <img src="https://fakeimg.pl/350x400/" alt="Fake" />
+                        <div className="magic-test-container" 
+                           data-progress={progress}
+                        >
+                           <img src="https://fakeimg.pl/350x400/" alt="Fake" />
 
-                        <div className="descriptions">
-                           {
-                           texts.map((text, index) => (
-                              <p 
-                                 key={String(index)}
-                                 className={`
-                                    ${getActiveDescription(progress, index) ? 'hasActive' : ''}
-                                 `}
-                              >
-                                 {text}
-                              </p>
-                           ))
-                           }
+                           <div className="descriptions">
+                              {
+                              texts.map((text, index) => (
+                                 <p 
+                                    key={String(index)}
+                                    className={`
+                                       ${getActiveDescription(progress, index) ? 'hasActive' : ''}
+                                    `}
+                                 >
+                                    {text}
+                                 </p>
+                              ))
+                              }
+                           </div>
                         </div>
-                     </div>
                      )
                   }  
                </MagicScrollCallback>
@@ -101,12 +101,12 @@
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | `size`  | `number` | Container height  | `4000` |
 | `contentPosition`  | `string` | Content position:  `top`, `between-top-middle`, `middle` and `bottom` | `middle` |
-| `children`  | `(progress: number) => ReactNode | ReactNode` |  Component Children `required` | `-` |
+| `children`  | `(progress: number) => ReactNode or ReactNode` |  Component Children `required` | `-` |
 
 ## 🔖 Layout
 
 <p align="center">
-   <video src="" alt="Demo video"/>
+   <video src="https://user-images.githubusercontent.com/61842405/169635936-a0902174-a8db-4403-839d-5062fce422b9.mov" alt="Demo video"/>
 </p>
 
 
