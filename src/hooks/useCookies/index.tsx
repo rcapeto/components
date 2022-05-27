@@ -22,10 +22,14 @@ export const useCookies = () => {
       const formatPath = (config && config.path) ?? '/';
       const domain = window.location.hostname;
 
+      const hasCookie = getCookie(key);
+      
+      if(hasCookie) return;
+
       const state = { 
          domain,
          path: formatPath,
-         key: encodeURIComponent(key),
+         key,
          expires: '',
          value
       };
@@ -42,23 +46,31 @@ export const useCookies = () => {
    };
 
    const getCookie = (key: string) => {
-      if(!cookies) return;
+      const allCookies = getAll();
 
-      for(const cookieKey of Object.keys(cookies)) {
+      if(!allCookies) return;
+
+      const state = {
+         cookie: '',
+      };
+
+      for(const cookieKey of Object.keys(allCookies)) {
          if(cookieKey === key) {
-            return cookies[cookieKey];
+            state.cookie = allCookies[cookieKey];
          }
       }
+
+      return state.cookie ? state.cookie : undefined;
    };
 
    const getAll = () => {
       const navigatorCookies: Cookie = 
-         document.cookie.split(';')
-            .map(cookie => cookie.split('='))
-            .reduce((acc, [key, ...values]) => ({
-               ...acc,
-               [key.trim()]: values.join('')
-            }), {});
+            document.cookie.split(';')
+               .map(cookie => cookie.split('='))
+               .reduce((acc, [key, ...values]) => ({
+                  ...acc,
+                  [key.trim()]: values.join('')
+               }), {});
       return navigatorCookies;
    };
 
@@ -71,7 +83,7 @@ export const useCookies = () => {
          domain,
          path: formatPath,
          'Max-Age': '-99999999',
-         key: encodeURIComponent(key),
+         key,
          expires: '',
       };
 
@@ -92,7 +104,6 @@ export const useCookies = () => {
       for(const [key, value] of Object.entries(config)) {
          if(value && key !== 'key' && key !== 'value') {
             str += ` ${key}=${value};`
-            console.log(key, value)
          }
       }
 
@@ -101,7 +112,6 @@ export const useCookies = () => {
       } else {
          return `${config.key}=;${str}`;
       }
-
    };
 
    useEffect(() => {
