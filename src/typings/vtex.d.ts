@@ -9,12 +9,23 @@ declare global {
    interface Schema {
       title: string;
       type: Extract<SchemaType, 'object'>;
-      default?: any;
       properties: SchemaProperties;
+      dependencies?: SchemaDependencies;
    }
 }
 
 export type SchemaType = 'array' | 'object' | 'string' | 'boolean' | 'number';
+export type UiWidget = 'image-uploader' | 'textarea' | 'datetime' | 'select' | 'color';
+
+export interface SchemaDependencies {
+   [key: string]: {
+      oneOf: {
+         properties: {
+            [key: string]: Partial<SchemaItemProperty>;
+         }
+      }[];
+   }
+}
 
 export interface SchemaProperties {
   __editorItemTitle?: {
@@ -22,23 +33,25 @@ export interface SchemaProperties {
     title: string
     type: Extract<SchemaType, 'string'>
   },
-   [key: string]: {
-      type: SchemaType;
-      enumNames?: string[]; //esse funciona junto com o enum
-      enum?: string[];
-      default?: any;
-      title?: string;
-      description?: string;
-      properties?: SchemaProperties;
-      format?: 'date-time',
-      widget?: {
-         "ui:widget"?: "image-uploader" | "datetime"
-      },
-      items?: {
-         type: SchemaType;
-         title?: string;
-         properties?: SchemaProperties;
-         default?: any;
-      }
-   }
+   [key: string]: SchemaItemProperty;
 }
+
+export interface SchemaItemProperty {
+   type: SchemaType;
+   enumNames?: string[]; //esse funciona junto com o enum
+   enum?: string[];
+   default?: any;
+   title?: string;
+   description?: string;
+   properties?: SchemaProperties;
+   format?: 'date-time',
+   widget?: {
+      "ui:widget"?: UiWidget;
+   },
+   items?: {
+      type: SchemaType;
+      title?: string;
+      properties?: SchemaProperties;
+      default?: any;
+   }
+};

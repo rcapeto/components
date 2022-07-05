@@ -42,6 +42,9 @@ Frequently used components.
 
 Remember, you need a account to access [Figma](http://figma.com/).
 
+## 📄 Custom Components and Schema Documentation
+- Check the doc [here](https://gist.github.com/rcapeto/4064dcc43837a8fba6ed716986f5ea94)
+
 ## 👨🏻‍💻 Devs
 - Raphael Capeto
 - [Gabriel Cintra](https://github.com/gblcintra)
