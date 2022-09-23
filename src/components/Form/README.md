@@ -69,7 +69,7 @@
 | `validation`  | `Func` | A function that recive value and return it was correct or not | `-` |
 | `onChangeText`  | `Callback` | Callback that returns input text | `-` |
 | `mask`  | `string | Callback` | `String` to use default mask or Callback to use your own mask, the callback params is a `string` and returns `string`| `-` |
-| `...reset`  | `React.InputHTMLAttributes<HTMLInputElement>` | Other props | `` |
+| `...rest`  | `React.InputHTMLAttributes<HTMLInputElement>` | Other props | `-` |
 
 ### FormSubmitButton props
 
