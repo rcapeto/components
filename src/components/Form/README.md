@@ -50,11 +50,11 @@
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `children`  | `ReactNode` | Children to render | `` |
+| `children`  | `ReactNode` | Children to render | `-` |
 | `inputs`  | `FormInputProps[]` | Inputs to render | `[]` |
-| `className`  | `string` | Your own class to customize form | `` |
-| `style`  | `CSSProperties` | React CSSProperties  | `` |
-| `handleSubmitForm`  | `callback` | Callback function that returns fields `{[key]: value }` | `` |
+| `className`  | `string` | Your own class to customize form | `-` |
+| `style`  | `CSSProperties` | React CSSProperties  | `-` |
+| `handleSubmitForm`  | `callback` | Callback function that returns fields `{[key]: value }` | `-` |
 
 
 ### FormInput props
@@ -63,14 +63,14 @@ onChangeText?: (value: string) => void;
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `onValidationError`  | `Callback` | Callback that returns message error, it has an error | `''` |
+| `onValidationError`  | `Callback` | Callback that returns message error, it has an error | `-` |
 | `errorMessage`  | `string` | Error message to render | `'Invalid Field'` |
-| `label`  | `string` | Input label `required` | `''` |
-| `inputName`  | `string` | To use in input ID and NAME `required` | `''` |
-| `inlineValidation`  | `boolean` | To check it has an error when user update input text | `''` |
-| `validation`  | `Func` | A function that recive value and return it was correct or not | `''` |
-| `onChangeText`  | `Callback` | Callback that returns input text | `''` |
-| `mask`  | `string | Callback` | `String` to use default mask or Callback to use own mask, the callback params is a `string` and returns `string`| `''` |
+| `label`  | `string` | Input label `required` | `-` |
+| `inputName`  | `string` | To use in input ID and NAME `required` | `-` |
+| `inlineValidation`  | `boolean` | To check it has an error when user update input text | `-` |
+| `validation`  | `Func` | A function that recive value and return it was correct or not | `-` |
+| `onChangeText`  | `Callback` | Callback that returns input text | `-` |
+| `mask`  | `string | Callback` | `String` to use default mask or Callback to use your own mask, the callback params is a `string` and returns `string`| `-` |
 | `...reset`  | `React.InputHTMLAttributes<HTMLInputElement>` | Other props | `` |
 
 ### FormSubmitButton props
@@ -78,7 +78,7 @@ onChangeText?: (value: string) => void;
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | `btnText`  | `string` | Button text | `''` |
-| `...rest`  | `React.ButtonHTMLAttributes<HTMLButtonElement>` | Other props | `` |
+| `...rest`  | `React.ButtonHTMLAttributes<HTMLButtonElement>` | Other props | `-` |
 
 
 ## 🔖 Layout
