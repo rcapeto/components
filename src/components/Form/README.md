@@ -18,26 +18,26 @@
                }}
             >
             
-            <Form.Input 
-               label='Name'
-               inputName='name'
-            />
+               <Form.Input 
+                  label='Name'
+                  inputName='name'
+               />
 
-            <Form.Input 
-               label='Last Name'
-               inputName='last_name'
-            />
+               <Form.Input 
+                  label='Last Name'
+                  inputName='last_name'
+               />
 
-            <Form.Input 
-               label='Phone'
-               inputName='phone'
-               validation={PhoneCheck}
-               inlineValidation
-               mask='cellphone'
-               errorMessage='Invalid Phone'
-            />
+               <Form.Input 
+                  label='Phone'
+                  inputName='phone'
+                  validation={PhoneCheck}
+                  inlineValidation
+                  mask='cellphone'
+                  errorMessage='Invalid Phone'
+               />
 
-            <Form.SubmitButton btnText="Register" />
+               <Form.SubmitButton btnText="Register" />
             </Form>
          </>
       );
@@ -58,8 +58,6 @@
 
 
 ### FormInput props
-
-onChangeText?: (value: string) => void;
 
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
@@ -84,8 +82,7 @@ onChangeText?: (value: string) => void;
 ## 🔖 Layout
 
 <p align="left">
-   <img width="665" alt="Form" src="https://user-images.githubusercontent.com/61842405/154866102-877ebef8-e8ce-4f81-8576-736f26f2c73d.png">
-
+  <img width="469" alt="Form" src="https://user-images.githubusercontent.com/61842405/192007153-a2a64af5-b6e9-415c-bdde-0039373ea5c0.png" />
 </p>
 
 
