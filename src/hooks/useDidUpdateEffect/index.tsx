@@ -1,6 +1,6 @@
 import { useEffect, useRef, DependencyList } from 'react';
 
-export default function useDidUpdateEffect(fn: CallableFunction, deps: DependencyList | undefined) {
+export default function useDidUpdateEffect(fn: CallableFunction, deps?: DependencyList | undefined) {
   const fncRef = useRef(fn);
   const didMountRef = useRef(false);
 
@@ -10,6 +10,6 @@ export default function useDidUpdateEffect(fn: CallableFunction, deps: Dependenc
     } else {
       return fncRef.current();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps);
 }
