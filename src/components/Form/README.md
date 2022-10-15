@@ -11,7 +11,7 @@
          <>
             <h1>Register Form</h1>
 
-            <Form 
+            <Form.Wrapper
                style={{ padding: '10px 30px'}}
                handleSubmitForm={(fields, event) => {
                   console.log({ fields, event })
@@ -38,7 +38,7 @@
                />
 
                <Form.SubmitButton btnText="Register" />
-            </Form>
+            </Form.Wrapper>
          </>
       );
    }

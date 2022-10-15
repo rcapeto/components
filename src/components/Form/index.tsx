@@ -8,7 +8,7 @@ import { PhoneCheck } from './validations/phone';
 
 import { FormProvider, useForm } from './context';
 
-function Form(props: FormProps) {
+function FormWrapper(props: FormProps) {
    return(
       <FormProvider>
          <FormComponent {...props}/>
@@ -16,15 +16,20 @@ function Form(props: FormProps) {
    );
 }
 
+export const Form = {
+   Wrapper: FormWrapper,
+   Input, 
+   SubmitButton,
+};
+
 Form.Input = Input;
 Form.SubmitButton = SubmitButton;
 
 export {
-   Form,
    type FormProps,
    type FormInputProps,
    type FormSubmitButtonProps,
    EmailCheck,
    PhoneCheck,
-   useForm
+   useForm,
 };
