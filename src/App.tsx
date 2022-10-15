@@ -1,32 +1,48 @@
-import { useState } from 'react';
-import { FaPhone } from 'react-icons/fa';
+import { FaPhone, FaUser } from 'react-icons/fa';
 import { TestLayout } from './components/TestLayout';
-
-import { TextInput } from './components/TextInput';
+import { Form } from './lib/Form';
 import { MaskInput } from './utils/masks';
 import { PhoneCheck } from './utils/validations';
 
 export default function App() {
-  const [errorInput, setErrorInput] = useState(false);
-
   return(
     <TestLayout isDarkMode>
-      <form action="" style={{ flex: 1, maxWidth: '360px' }}>
-        <TextInput.Wrapper inputHasError={errorInput}>
-          <TextInput.Icon>
-            <FaPhone />
-          </TextInput.Icon>
+      <div style={{ width: '100%', maxWidth: 420 }}>
+        <Form.Wrapper onHandleSubmit={(inputs, error) => {}}>
+          <Form.Title>Register User</Form.Title>
 
-          <TextInput.Input 
-            validation={PhoneCheck}
-            errorMessage="Invalid phone"
-            type="email"
-            mask={value => MaskInput("cellphone", value)}
-            placeholder='(XX) XXXXX-XXXX'
-            onErrorValidation={error => setErrorInput(error)}
-          />
-        </TextInput.Wrapper>
-      </form>
+          <Form.Field>
+            <Form.Label htmlFor="phone">Phone</Form.Label>
+            <Form.InputWrapper>
+              <Form.InputIcon>
+                <FaPhone/>
+              </Form.InputIcon>
+              <Form.Input 
+                inputName="phone" 
+                placeholder="Your phone" 
+                inlineValidation 
+                mask={text => MaskInput('cellphone', text)}
+                validation={PhoneCheck}
+              />
+            </Form.InputWrapper>
+          </Form.Field>
+
+          <Form.Field>
+            <Form.Label htmlFor="name">Name</Form.Label>
+            <Form.InputWrapper>
+              <Form.InputIcon>
+                <FaUser/>
+              </Form.InputIcon>
+              <Form.Input inputName="name" placeholder="Your name" required />
+            </Form.InputWrapper>
+          </Form.Field>
+
+          <Form.ErrorMessage message="Can not send this Form" />
+
+          <Form.Button buttonText="Create account" />
+
+        </Form.Wrapper>
+      </div>
     </TestLayout>
   );
 }

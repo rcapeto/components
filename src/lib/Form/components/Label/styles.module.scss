@@ -1,0 +1,10 @@
+.labelContainer {
+   color: var(--white);
+   font-size: 14px;
+   font-weight: 300;
+   margin-bottom: 5px;
+
+   @media (max-width: 1024px) {
+      font-size: 12px;
+   }
+}

@@ -13,7 +13,7 @@
          background: transparent;
          border: 0;
          height: 100%;
-         color: #fff;
+         color: var(--white);
          font-size: 12px;
          padding: 5px 0;
          outline: none;
@@ -29,14 +29,16 @@
       opacity: 0;
       height: 0px;
       padding-top: 5px;
+      display: none;
 
       &.hasError {
          opacity: 1;
          height: auto;
+         display: flex;
       }
 
       p {
-         color: #f87171;
+         color: var(--red-error-message);
          font-size: 12px;
       }
    }
