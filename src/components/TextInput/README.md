@@ -84,6 +84,8 @@ function phoneCheck(phone: string) {
 | `onErrorValidation`  | `Fnc: (error: boolean, errorMessage: string) => void` | Callback that returns if there is an error and the errorMessage | `-` |
 
 ## 🔖 Layout
+<img width="768" alt="Input" src="https://user-images.githubusercontent.com/61842405/196006527-451c5b10-797e-4232-9178-07c10625791d.png">
+<img width="768" alt="Input with Error" src="https://user-images.githubusercontent.com/61842405/196006556-5bce2f14-c053-414b-ae80-a8201d58e761.png">
 
 ## 👨🏻‍💻 Developers
 - Raphael Capeto
