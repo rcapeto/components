@@ -13,39 +13,39 @@
 
       return(
          <div style={{ width: '100%', maxWidth: 420 }}>
-         <Form.Wrapper>
-            <Form.Title>Register User</Form.Title>
+           <Form.Wrapper>
+              <Form.Title>Register User</Form.Title>
 
-            <Form.Field>
-               <Form.Label htmlFor="phone">Phone</Form.Label>
-               <Form.InputWrapper>
-               <Form.InputIcon>
-                  <FaPhone/>
-               </Form.InputIcon>
-               <Form.Input 
-                  inputName="phone" 
-                  placeholder="Your phone" 
-                  inlineValidation 
-                  mask={maskPhone}
-                  validation={phoneCheck}
-               />
-               </Form.InputWrapper>
-            </Form.Field>
+              <Form.Field>
+                 <Form.Label htmlFor="phone">Phone</Form.Label>
+                 <Form.InputWrapper>
+                 <Form.InputIcon>
+                    <FaPhone/>
+                 </Form.InputIcon>
+                 <Form.Input 
+                    inputName="phone" 
+                    placeholder="Your phone" 
+                    inlineValidation 
+                    mask={maskPhone}
+                    validation={phoneCheck}
+                 />
+                 </Form.InputWrapper>
+              </Form.Field>
 
-            <Form.Field>
-               <Form.Label htmlFor="name">Name</Form.Label>
-               <Form.InputWrapper>
-               <Form.InputIcon>
-                  <FaUser/>
-               </Form.InputIcon>
-               <Form.Input inputName="name" placeholder="Your name" required />
-               </Form.InputWrapper>
-            </Form.Field>
+              <Form.Field>
+                 <Form.Label htmlFor="name">Name</Form.Label>
+                 <Form.InputWrapper>
+                 <Form.InputIcon>
+                    <FaUser/>
+                 </Form.InputIcon>
+                 <Form.Input inputName="name" placeholder="Your name" required />
+                 </Form.InputWrapper>
+              </Form.Field>
 
-            <Form.ErrorMessage message="Can not send this Form"/>
+              <Form.ErrorMessage message="Can not send this Form"/>
 
-            <Form.Button buttonText="Create account"/>
-         </Form.Wrapper>
+              <Form.Button buttonText="Create account"/>
+           </Form.Wrapper>
          </div>
       );
   }
@@ -60,8 +60,8 @@ function maskPhone(phone: string) {
    value = value.replace(regexRemoveChar, '');
    value = value.replace(/(\d{2})(\d)/, '($1) $2');
    value = value.replace(/(\d{5})(\d)/, '$1-$2');
+   
    if(value.length > 15) value = value.slice(0, -1);
-
    return value;
 
 }
@@ -150,10 +150,9 @@ function phoneCheck(phone: string) {
 | Prop | Type | Description                                                                                                                                         | Default Value |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | `message`  | `String` | Message that will be rendered when there is an error   | `Has an error in form` |
-| 
-
 
 ## 🔖 Layout
+<img width="673" alt="Form" src="https://user-images.githubusercontent.com/61842405/196011773-b3c5a866-85b6-46fe-94cc-179f4d54e82f.png">
 
 ## 👨🏻‍💻 Developers
 - Raphael Capeto
