@@ -1,6 +1,6 @@
 export type Config = {
   gender?: 'a' | 'o';
-  uppercase?: boolean;
+  capitalize?: boolean;
 };
 
 const decimalsToTen = [
@@ -15,80 +15,64 @@ const decimalsToTen = [
   'oitav',
   'non',
 ];
+
 const decimalsPlusTen = [
   '',
-  'décimo',
-  'vig',
-  'trig',
-  'quadrag',
-  'quinquag',
-  'sexag',
-  'septuag',
-  'octog',
-  'nonag',
+  'décim',
+  'vigésim',
+  'trigésim',
+  'quadragésim',
+  'quinquagésim',
+  'sexagésim',
+  'septuagésim',
+  'octogésim',
+  'nonagésim',
 ];
+
 const hundredths = [
   '',
-  'cent',
-  'ducent',
-  'trecent',
-  'quadrigent',
-  'quingent',
-  'sexcent',
-  'septigent',
-  'octigent',
-  'nongent',
+  'centésim',
+  'ducentésim',
+  'trecentésim',
+  'quadrigentésim',
+  'quingentésim',
+  'sexcentésim',
+  'septigentésim',
+  'octigentésim',
+  'nongentésim',
 ];
 
-function lessThan10(number: number, gender: string): string {
-  const textPrefix = decimalsToTen[number];
-  return textPrefix ? `${textPrefix}${gender}` : '';
-}
-
-function upperThan10(number: number, gender: string): string {
-  const numberDivider10 = Math.floor(number / 10);
-  const textPrefix = decimalsPlusTen[numberDivider10];
-  const result = number - (numberDivider10 * 10);
-  const sufix = numberDivider10 > 1 ? `ésim${gender}` : "";
-
-  return `${textPrefix}${sufix} ${lessThan10(result, gender)}`
-}
-
 export default function numberToOrdinal(value: number, config?: Config) {
-  if(!Number.isInteger(value)) {
-      throw new Error("Não implementado para números não inteiros.")
-  } else if(value > 999) {
-      throw new Error("Não implementado para números maiores que 999.")
-  } else if(value < 1) {
-      throw new Error("Não implementado para números negativos.")
+  if (!Number.isInteger(value) || value > 999 || value < 1) {
+    console.warn('It`s not possible to handle this number.');
+    return value;
   }
 
   const gender = config?.gender ?? 'o';
-  const uppercase = config?.uppercase ?? false;
+  const txtHandler = config?.capitalize ? capitalize : (txt: string) => txt;
 
-  let text = ""
+  let pow = 3;
+  const ordinals = [decimalsToTen, decimalsPlusTen, hundredths];
+  const textArray: Array<string> = [];
 
-  const isHundredthHouse = value < 1000 && value > 99;
-  const isDecimal = value < 100 && value > 9;
-  const isLowerThan10 = value < 10 && value > 0;
+  while (pow--) {
+    const radix = 10 ** pow;
+    const raw = Math.floor(value / radix);
+    const lastDigit = raw % 10;
 
-  if (isHundredthHouse) {
-    const numberDivider100 = Math.floor(value / 100);
-    const result = value - (numberDivider100 * 100);
-    const textPrefix = hundredths[numberDivider100];
-    const currentFnc = result > 9 ? upperThan10 : lessThan10;
-
-    text = `${textPrefix}ésim${gender} ${currentFnc(result, gender)}`
+    if (lastDigit) {
+      const prefix = ordinals[pow][lastDigit];
+      textArray.push(`${prefix}${gender}`);
+    }
   }
 
-  if (isDecimal) text = upperThan10(value, gender);
-  if(isLowerThan10) text = lessThan10(value, gender);
-  
-  return uppercase ? toUpperCase(text) : text;
+  return txtHandler(textArray.join(' '));
 }
 
-function toUpperCase(text: string) {
-  const words = text.trim().split(' ');
-  const upper = words.map(word => word.replace(word[0], word[0].toUpperCase()))
-  return upper.join(' ');
+function capitalize(text: string) {
+  return text.split(' ').map(capitalizeWord).join(' ');
+}
+
+function capitalizeWord(text: string) {
+  return text.replace(text[0], text[0].toUpperCase())
 }
