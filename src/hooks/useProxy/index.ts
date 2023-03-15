@@ -26,7 +26,7 @@ export function useProxy<Type extends object>(initialState?: Type, config?: Part
             notifyAll(target[property], newValue);
 
             if(config?.handlers?.set) {
-               config?.handlers?.set(target, property as keyof Type, newValue);
+               config.handlers.set(target, property as keyof Type, newValue);
             } else {
                target[property] = newValue;
             }

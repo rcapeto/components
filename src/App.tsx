@@ -11,7 +11,9 @@ export default function App() {
   }
 
   useEffect(() => {
-    const cancel = subscribe(state, console.log);
+    const cancel = subscribe(state, (oldValue, newValue) => {
+      console.log('Subscribe middleware', { oldValue, newValue });
+    });
 
     return () => {
       cancel();
