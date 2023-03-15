@@ -5,7 +5,7 @@ export default function App() {
   const state = useProxy({ count: 0 });
 
   function increment() {
-    state.count = state.count === 5 ? 5 : state.count + 1;
+    state.count += 1;
   }
 
   return(
@@ -16,7 +16,9 @@ export default function App() {
           Contador: { state.count }
         </p>
 
-        <button onClick={increment}>Adicionar</button>
+        <button onClick={increment}>
+          Adicionar
+        </button>
       </div>
     </TestLayout>
   );
