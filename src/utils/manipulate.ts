@@ -1,16 +1,16 @@
 export const manipulateURL = (
    type: 'set' | 'get',
-   skuId?: string
+   param: string,
+   newValue?: string
 ) => {
    const url = new URL(window.location.href);
-   const searchSkuID = 'idsku';
 
    switch(type) {
       case 'get':
-         return url.searchParams.get(searchSkuID);
+         return url.searchParams.get(param);
       case 'set':
-         if(skuId) {
-            url.searchParams.set(searchSkuID, skuId);
+         if(newValue) {
+            url.searchParams.set(param, newValue);
             window.history.replaceState(null, '', url.toString());
          }
          return null;
