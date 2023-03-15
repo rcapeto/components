@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { ProxySubscribers } from '../../utils/singleton/ProxySubscribers';
 
 import { UseProxyConfiguration } from './types';
+import { proxy as createProxy } from './utils/proxy';
 
 export function useProxy<Type extends object>(initialState?: Type, config?: Partial<UseProxyConfiguration<Type>>): Type {
    const [, setIndex] = useState(0);
@@ -16,7 +17,7 @@ export function useProxy<Type extends object>(initialState?: Type, config?: Part
    }
 
    const proxy = useRef<Type>(
-      new Proxy(initialState ?? {} as any, {
+      createProxy(initialState ?? {} as any, {
          set(target, property, newValue) {
             if(target[property] === newValue) {
                return true;
