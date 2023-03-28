@@ -1,0 +1,82 @@
+.inputContainer {
+   .labelContainer {
+      label {
+         font-size: 14px;
+         line-height: 22px;
+         font-weight: 400;
+         color: #000;
+         margin-bottom: 5px;
+      }
+   }
+
+   .inputContent {
+      display: flex;
+      align-items: center;
+      background-color: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      padding: 16px 12px 16px 12px;
+      display: flex;
+      align-items: center;
+
+       // Remover cor do background quando o user da autofill
+       input:-webkit-autofill,
+       input:-webkit-autofill:hover, 
+       input:-webkit-autofill:focus {
+          -webkit-box-shadow: 0 0 0 30px #FFF inset;
+       }
+
+      input {
+         margin-right: 5px;
+         width: 100%;
+         background-color: transparent;
+         border: 0;
+         font-size: 16px;
+         line-height: 24px;
+         font-weight: 400;
+         outline: none;
+         color: #1A1A1A;
+
+         &::placeholder {
+            color: #9A9A9A;
+         }
+      }
+
+       &.hasError {
+         background-color: #FFE8E5;
+         border-color: #B00015;
+
+          input:-webkit-autofill,
+          input:-webkit-autofill:hover, 
+          input:-webkit-autofill:focus {
+             -webkit-box-shadow: 0 0 0 30px #FFE8E5 inset;
+          }
+
+          input {
+            &::placeholder {
+               color: #B00015;
+            }
+          }
+       }
+
+      .btnShowPassword {
+         border: 0;
+         background-color: transparent;
+      }
+   }
+
+   .inputErrorContainer {
+      margin-top: 5px;
+
+      span {
+         font-weight: 400;
+         font-size: 12px;
+         line-height: 18px;
+         color: #666666;
+      }
+   }
+
+   .helpPassword {
+      margin-top: 15px;
+   }
+}
