@@ -22,6 +22,7 @@ interface InputV2Props {
    isPassword?: boolean;
    showPasswordHelp?: boolean;
    inputName: string;
+   required?: boolean;
 };
 
 const DEFAULT_ERROR_MESSAGE = 'Por favor preencha o campo corretamente.'; 
@@ -53,6 +54,13 @@ function InputV2(props: InputV2Props) {
       const messageError = props?.errorMessage ?? DEFAULT_ERROR_MESSAGE;
       const message = isValid ? text : messageError;
       const handler = isValid ? props.onSuccess : props.onError;
+
+      if(!props.required && isValid) {
+         handler?.(props.inputName, message);
+     
+      } else if(props.required) {
+         handler?.(props.inputName, message);
+      }
 
       handler?.(props.inputName, message);
 
