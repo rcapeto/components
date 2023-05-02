@@ -1,4 +1,4 @@
- export function slugify(text: string, separator: string = "-") {
+ export function slugfy(text: string, separator: string = "-") {
    if(typeof text !== 'string') {
       console.warn("Text must be a string");
       return;
