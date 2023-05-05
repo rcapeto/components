@@ -48,6 +48,7 @@ export default function Form() {
             onError={onError}
             hasError={hasError('email')}
             onSuccess={onSuccess}
+            type="email"
          />
 
          <InputV2 

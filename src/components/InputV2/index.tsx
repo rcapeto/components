@@ -4,6 +4,8 @@ import { BsEyeSlashFill, BsEyeFill } from 'react-icons/bs';
 import styles from './Input.styles.module.scss';
 import PasswordHelp from './components/PasswordHelp';
 
+export type InputTypes = 'text' | 'email';
+
 interface InputV2Props {
    hasError?: boolean;
    inlineValidation?: boolean;
@@ -23,6 +25,7 @@ interface InputV2Props {
    showPasswordHelp?: boolean;
    inputName: string;
    required?: boolean;
+   type?: InputTypes
 };
 
 const DEFAULT_ERROR_MESSAGE = 'Por favor preencha o campo corretamente.'; 
@@ -55,15 +58,7 @@ function InputV2(props: InputV2Props) {
       const message = isValid ? text : messageError;
       const handler = isValid ? props.onSuccess : props.onError;
 
-      if(!props.required && isValid) {
-         handler?.(props.inputName, message);
-     
-      } else if(props.required) {
-         handler?.(props.inputName, message);
-      }
-
       handler?.(props.inputName, message);
-
       return isValid;
    }, [props]);
 
@@ -111,13 +106,14 @@ function InputV2(props: InputV2Props) {
 
          <div className={inputContentStyles}>
             <input 
-               type={props.isPassword && !showPassword ? 'password' : 'text'} 
+               type={props.isPassword && !showPassword ? 'password' : props.type || 'text'} 
                onChange={onChange}
                onBlur={onBlur}
                name={props.inputName}
                id={props.id}
                placeholder={props.placeholder}
                value={input}
+               required={props.required}
             />
 
             {

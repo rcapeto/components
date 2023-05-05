@@ -7,14 +7,7 @@ import { proxy as createProxy } from './utils/proxy';
 export function useProxy<Type extends object>(initialState?: Type, config?: Partial<UseProxyConfiguration<Type>>): Type {
    const [, setIndex] = useState(0);
 
-   const subscriptions = new Set<CallableFunction>();
    const proxySubscribers = ProxySubscribers.getInstance().getSubscribers();
-
-   function notifyAll(oldValue: any, newValue: any) {
-      subscriptions.forEach(subscriber => {
-         subscriber(oldValue, newValue);
-      });
-   }
 
    const proxy = useRef<Type>(
       createProxy(initialState ?? {} as any, {
@@ -42,7 +35,17 @@ export function useProxy<Type extends object>(initialState?: Type, config?: Part
    );
 
    if(!config?.cancelSubscription) {
-      proxySubscribers.set(proxy.current, subscriptions);
+      proxySubscribers.set(proxy.current, new Set<CallableFunction>());
+   }
+
+   function notifyAll(oldValue: any, newValue: any) {
+      const subscriptions = proxySubscribers.get(proxy.current);
+
+      if(subscriptions) {
+         subscriptions.forEach(subscriber => {
+            subscriber(oldValue, newValue);
+         });
+      }
    }
 
    return proxy.current;
