@@ -23,7 +23,7 @@ jobs:
       - name: Generate changeset
         run: yarn changeset-version
 
-      - name: Configurando usuário  
+      - name: Atualizando github  
         env: 
           BRANCH: ${{ github.ref_name }}
         run: |
