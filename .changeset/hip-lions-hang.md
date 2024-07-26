@@ -1,0 +1,5 @@
+---
+"components": minor
+---
+
+atualizando CLI
