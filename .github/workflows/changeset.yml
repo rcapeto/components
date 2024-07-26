@@ -35,6 +35,7 @@ jobs:
           git add .
           git commit -m "chore: update changelog"
           git push origin $BRANCH
+          
       - name: Criando Pull Request 
         with:
             commit-message: create pr
