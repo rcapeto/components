@@ -23,7 +23,4 @@ jobs:
 
       - name: Generate changeset
         run: changeset-version
-  update_master:
-    - name: Commit changelog
-      run: echo "teste"
   
