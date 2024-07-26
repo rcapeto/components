@@ -19,11 +19,11 @@ jobs:
 
       - name: Install dependencies
         run: yarn
-        working-directory: ./mobile
 
       - name: Generate changeset
-        run: changeset-version
-  changeset:
+        run: yarn changeset-version
+
+  git_push:
     name: Changeset
     runs-on: ubuntu-latest
 
