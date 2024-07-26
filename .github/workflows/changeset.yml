@@ -13,7 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - uses: peter-evans/create-pull-request@v4
 
         with:
           node-version: 16
@@ -35,12 +34,13 @@ jobs:
           git add .
           git commit -m "chore: update changelog"
           git push origin $BRANCH
-          
+
       - name: Criando Pull Request 
-        with:
-            commit-message: create pr
-            title: Update your branch
-            body: This pr is generate automatically
-            base: develop
-            labels: automated-pr
-            branch: master
+        uses: peter-evans/create-pull-request@v4
+          with:
+              commit-message: create pr
+              title: Update your branch
+              body: This pr is generate automatically
+              base: develop
+              labels: automated-pr
+              branch: master
