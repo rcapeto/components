@@ -36,10 +36,10 @@ jobs:
           git commit -m "chore: update changelog"
           git push origin $BRANCH
       - name: Criando Pull Request 
-          with:
-              commit-message: create pr
-              title: Update your branch
-              body: This pr is generate automatically
-              base: develop
-              labels: automated-pr
-              branch: master
+        with:
+            commit-message: create pr
+            title: Update your branch
+            body: This pr is generate automatically
+            base: develop
+            labels: automated-pr
+            branch: master
