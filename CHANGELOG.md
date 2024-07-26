@@ -1,5 +1,11 @@
 # components
 
+## 0.4.0
+
+### Minor Changes
+
+- 452677e: atualizando CLI
+
 ## 0.3.0
 
 ### Minor Changes
