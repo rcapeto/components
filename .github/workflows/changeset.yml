@@ -37,7 +37,7 @@ jobs:
       - name: Criando Pull Request 
           uses: peter-evans/create-pull-request@v4
           with:
-              commit-message: Update branch
+              commit-message: create pr
               title: Update your branch
               body: This pr is generate automatically
               base: develop
