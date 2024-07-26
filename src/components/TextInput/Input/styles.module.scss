@@ -1,0 +1,45 @@
+.inputWrapper {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 100%;
+
+   .inputContainer {
+      width: 100%;
+      height: 100%;
+
+      input {
+         width: 100%;
+         background: transparent;
+         border: 0;
+         height: 100%;
+         color: var(--white);
+         font-size: 12px;
+         padding: 5px 0;
+         outline: none;
+
+         &::placeholder {
+            color: var(--gray-color-400);
+         }
+      }
+   }
+
+   .inputErrorContainer {
+      width: 100%;
+      opacity: 0;
+      height: 0px;
+      padding-top: 5px;
+      display: none;
+
+      &.hasError {
+         opacity: 1;
+         height: auto;
+         display: flex;
+      }
+
+      p {
+         color: var(--red-error-message);
+         font-size: 12px;
+      }
+   }
+};

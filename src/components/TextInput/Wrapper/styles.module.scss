@@ -1,0 +1,12 @@
+.wrapperContainer {
+   display: flex;
+   background: var(--gray-color-800);
+   align-items: center;
+   padding: 12px;
+   border-radius: 8px;
+   gap: 10px;
+
+   &.hasError {
+      border: 1px solid #f87171;
+   }
+}

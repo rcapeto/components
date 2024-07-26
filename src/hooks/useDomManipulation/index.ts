@@ -1,16 +1,22 @@
 export const useDOM = () => {
    const elementInViewport = (element: HTMLElement): boolean => {
-      const scrollTop = window.pageYOffset;
+      //element position
       const elementTop = element.offsetTop;
       const elementBottom = element.getBoundingClientRect().bottom;
+
+      //scroll position
+      const scrollTop = window.scrollY; //or .pageYOffset
+      const windowBottomPosition = scrollTop + window.innerHeight;
+
+      return (windowBottomPosition > elementTop && elementBottom >= 0);
+   };
+
+   const endOfTheScreen = (): boolean => {
+      const scrollTop = window.scrollY //or .pageYOffset;
       const windowBottomPosition = scrollTop + window.innerHeight;
       const maxScrollHeight = document.documentElement.scrollHeight;
-      const maxScreen = windowBottomPosition === maxScrollHeight;
-   
-      if(maxScreen) console.log('Screen End');
-   
-      if(windowBottomPosition > elementTop && elementBottom > 0) return true;
-      else return false;
+      
+      return (windowBottomPosition === maxScrollHeight);
    };
    
    //nodeType
@@ -43,5 +49,5 @@ export const useDOM = () => {
       }
    };
 
-   return { elementInViewport, observerDOM };
+   return { elementInViewport, observerDOM, endOfTheScreen };
 };

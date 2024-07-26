@@ -33,12 +33,27 @@
    --toast-success: #d1e6dd;
    --toast-error: #f8d7d9;
    --tooltip-bg-color: #3f3f40;
+
+   // GRAY COLOR
+   --gray-color-900: #121214;
+   --gray-color-800: #202024;
+   --gray-color-400: #7c7c8a;
+   --gray-color-200: #c4c4cc;
+   --gray-color-100: #e1e1e6;
+
+   // FORM
+   --red-error-message: #f87171;
 }  
 
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   font-synthesis: none;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-text-size-adjust: 100%;
 }
 
 body {

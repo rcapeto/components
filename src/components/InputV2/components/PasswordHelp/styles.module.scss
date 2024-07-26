@@ -1,0 +1,30 @@
+.helpContainer {
+   margin-top: 10px;
+   font-weight: 400;
+
+   .securityText {
+      font-size: 12px;
+      line-height: 18px;
+      color: #9A9A9A;
+      margin-bottom: 5px;
+   }
+
+   .textValidation {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #9A9A9A;
+
+      &.correct {
+         color: #005C00;
+      }
+
+      &.wrong {
+         color: #B00015;
+      }
+
+      &.empty {
+         color: #9A9A9A;
+      }
+   }
+}

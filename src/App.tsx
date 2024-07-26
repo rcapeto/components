@@ -1,47 +1,44 @@
-import { Settings } from 'react-slick';
-import BannerCountdoun from './components/BannerCountdown';
-import { ContentBannerProps } from './components/BannerCountdown/types';
+import { useEffect } from 'react'
+import { TestLayout } from './components/TestLayout'
+import { useProxy } from './hooks/useProxy'
+import { subscribe } from './hooks/useProxy/utils/subscription'
+import { useEventSubject } from './hooks/useEventSubject'
+import { buildProvidersTree } from './utils/buildProvidersTree'
 
-const array: ContentBannerProps[] = [
-  {
-    image: 'https://www.google.com/logos/doodles/2022/dr-michiaki-takahashis-94th-birthday-6753651837109359-l.webp',
-    alt: 'google',
-    title: 'Google',
-    countdown:{
-      countdownUse:true,
-      dataInit:'09/04/2022',
-      dataFinish:'09/04/2022 14:16',
-      text:'testooo'
+const Providers = buildProvidersTree([[TestLayout, { isDarkMode: true }]])
+
+export default function App() {
+  const state = useProxy({ count: 0 })
+  const eventSubject = useEventSubject(1)
+  const observable = eventSubject.asObservable()
+
+  function increment() {
+    state.count += 1
+    eventSubject.next(state.count)
+  }
+
+  useEffect(() => {
+    const cancel = subscribe(state, (oldValue, newValue) => {
+      console.log('Subscribe middleware', { oldValue, newValue })
+    })
+
+    return () => {
+      cancel()
     }
-  },
-  {
-    image: 'https://www.google.com/logos/doodles/2022/dr-michiaki-takahashis-94th-birthday-6753651837109359-l.webp',
-    alt: 'google',
-    title: 'Google',
-    countdown:{
-      countdownUse:true,
-      dataInit:'09/04/2022',
-      dataFinish:'09/04/2022 15:00',
-      text:'testooo'
-    }
-  },
-];
+  }, [state])
 
-const setting: Settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1
-}
+  useEffect(() => {
+    observable.subscribe((number) => {
+      console.log('use-effect data', number)
+    })
+  }, [])
 
-const App = () => {
   return (
-    <BannerCountdoun
-      sliderSettings={setting}
-      contents={array}
-    />
-  );
-};
-
-export default App;
+    <Providers>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+        <h1 style={{ color: 'white' }}>Master</h1>
+        <button onClick={increment}>Increment</button>
+      </div>
+    </Providers>
+  )
+}
