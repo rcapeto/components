@@ -1,5 +1,15 @@
 # components
 
+## 0.5.0
+
+### Minor Changes
+
+- da60295: Atualizando CLI
+
+### Patch Changes
+
+- 704dad1: teste
+
 ## 0.4.0
 
 ### Minor Changes
